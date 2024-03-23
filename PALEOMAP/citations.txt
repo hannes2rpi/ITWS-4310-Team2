@@ -5,3 +5,7 @@ Bubble sort: https://stackoverflow.com/questions/16243366/sorting-array-with-num
 Writing a json file in javascript: https://www.digitalocean.com/community/tutorials/how-to-work-with-json-in-javascript
 
 How to fix sorting when your float variables are actually strings: https://stackoverflow.com/questions/48082009/array-sort-is-not-working-correctly-in-javascript
+
+Positioning image on a page: https://stackoverflow.com/questions/48474/how-do-i-position-one-image-on-top-of-another-in-html
+
+Editing image location with img tag: https://www.w3schools.com/tags/tag_img.asp
