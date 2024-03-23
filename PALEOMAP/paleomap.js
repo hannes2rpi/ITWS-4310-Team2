@@ -1,8 +1,11 @@
 function clicked(){
-  //SELECT COUNTY, READ JSON, FIND 5 CLOSEST FOSSILS
+  //SELECT COUNTY, READ JSON, FIND 5 CLOSEST FOSSILS, PLACE MARKERS ON MAP
+
+  //clear previous markers (if any)
+  document.getElementById("map").innerHTML = '<img class="image1" src="images/Chicago-centered-map_450_Ordovician-new(copy).jpg" alt="map of midwest" width="700" height="450"/>';
 
   //read json
-  const data = '[{"counties": [{"name": "Albany","lat": 42.7,"long": 73.8},{"name": "Saukville","lat": 43.4,"long": 87.9},{"name": "Chicago","lat": 41.9,"long": 87.6}],"fossils": [{"name": "raptor","lat": 42.5,"long": 74.9},{"name": "dog","lat": 43.0,"long": 87.0},{"name": "bug","lat": 42.0,"long": 90.0},{"name": "fish","lat": 43.0,"long": 76.0},{"name": "bee","lat": 42.1,"long": 88.0},{"name": "lizard","lat": 42.5,"long": 80.1}]}]';
+  const data = '[{"counties": [{"name": "Pittsburgh","lat": 40.4,"long": -80.0},{"name": "Saukville","lat": 43.4,"long": -87.9},{"name": "Chicago","lat": 41.9,"long": -87.6}],"fossils": [{"name": "raptor","lat": 42.5,"long": -74.9},{"name": "dog","lat": 43.0,"long": -87.0},{"name": "bug","lat": 42.0,"long": -90.0},{"name": "fish","lat": 43.0,"long": -76.0},{"name": "bee","lat": 42.1,"long": -88.0},{"name": "lizard","lat": 42.5,"long": -80.1}]}]';
   var fossilFile = JSON.parse(data);
 
   //set the given county and assign coordinates
@@ -78,5 +81,20 @@ function clicked(){
   document.getElementById("map2").innerHTML += closest5[2][1];
   document.getElementById("map3").innerHTML += closest5[3][1];
   document.getElementById("map4").innerHTML += closest5[4][1];
+
+  //top of map (lat): 47.7, bottom of map (lat): 36.5, left of map (long): -95.0, right of map (long): -74.4
+  
+  //convert coordinates to pixels (change in lat/long by change in pixel location)
+  var countyMapLocation = [];
+  var countyMapLat = (((47.7 - coordsCounty[0])*450)/(47.7-36.5)).toFixed(1)-20;
+  var countyMapLong = ((((-95) - coordsCounty[1])*700)/((-95)-(-74.4))).toFixed(1)+10;
+  console.log(countyMapLat);
+  console.log(countyMapLong);
+
+  //assign pixel location and add to map
+  countyMapLocation[0] = countyMapLat;
+  countyMapLocation[1] = countyMapLong;
+  var image = '<img class="image2" src="images/red_marker.png" width="20" height="20" style="top:' + countyMapLocation[0] + 'px;left:' + countyMapLocation[1] + 'px;"/>';
+  document.getElementById("map").innerHTML += image;
 
 };
