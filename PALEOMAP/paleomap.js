@@ -84,17 +84,27 @@ function clicked(){
 
   //top of map (lat): 47.7, bottom of map (lat): 36.5, left of map (long): -95.0, right of map (long): -74.4
   
-  //convert coordinates to pixels (change in lat/long by change in pixel location)
-  var countyMapLocation = [];
+  //convert county coordinates to pixels (change in lat/long converted to change in pixel location)
   var countyMapLat = (((47.7 - coordsCounty[0])*450)/(47.7-36.5)).toFixed(1)-20;
   var countyMapLong = ((((-95) - coordsCounty[1])*700)/((-95)-(-74.4))).toFixed(1)+10;
   console.log(countyMapLat);
   console.log(countyMapLong);
 
-  //assign pixel location and add to map
-  countyMapLocation[0] = countyMapLat;
-  countyMapLocation[1] = countyMapLong;
-  var image = '<img class="image2" src="images/red_marker.png" width="20" height="20" style="top:' + countyMapLocation[0] + 'px;left:' + countyMapLocation[1] + 'px;"/>';
+  //add marker to map to map
+  var image = '<img class="image2" src="images/red_marker.png" width="20" height="20" style="top:' + countyMapLat + 'px;left:' + countyMapLong + 'px;"/>';
   document.getElementById("map").innerHTML += image;
+
+  //convert fossil coordinates to pixels (change in lat/long converted to change in pixel location)
+  var fossilMapLat = 0;
+  var fossilMapLong = 0;
+
+  for (var i = 0; i < closest5.length; i++){
+    fossilMapLat = (((47.7 - closest5[i][2])*450)/(47.7-36.5)).toFixed(1)-20;
+    fossilMapLong = ((((-95) - closest5[i][3])*700)/((-95)-(-74.4))).toFixed(1)+10;
+    console.log(fossilMapLat);
+    console.log(fossilMapLong);
+    var image2 = '<img class="image2" src="images/green_marker.png" width="20" height="20" style="top:' + fossilMapLat + 'px;left:' + fossilMapLong + 'px;"/>';
+    document.getElementById("map").innerHTML += image2;
+  }
 
 };
