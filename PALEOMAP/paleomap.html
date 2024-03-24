@@ -29,6 +29,10 @@
         .image2 {
           position: absolute;
         }
+
+        .image2:hover {
+          background: ;
+        }
     </style>
   </head>
 
@@ -37,7 +41,11 @@
       <h1>PALEOMAP</h1>
     </div>
 
-    <div id="block">
+    <div>
+      <p>Enter a county (Chicago, Saukville, or Pittsburg) and click on markers to see exact location!</p>
+    </div><br>
+
+    <div>
       <label for="county">County:</label>
       <input type="text" id="county" name="county">
       <button onclick="clicked()">Search</button>
@@ -47,24 +55,7 @@
       <img class="image1" src="images/Chicago-centered-map_450_Ordovician-new(copy).jpg" alt="map of midwest" width="700" height="450"/>
     </div>
 
-    <div>
-      <p id="map0"></p>
-    </div>
-
-    <div>
-      <p id="map1"></p>
-    </div>
-
-    <div>
-      <p id="map2"></p>
-    </div>
-
-    <div>
-      <p id="map3"></p>
-    </div>
-
-    <div>
-      <p id="map4"></p>
+    <div id="markerDescription">
     </div>
 
   </body>
