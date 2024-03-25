@@ -81,6 +81,7 @@ function clicked(){
 
   //clear previous markers (if any)
   document.getElementById("map").innerHTML = '<img class="image1" src="images/Chicago-centered-map_450_Ordovician-new(copy).jpg" alt="map of midwest" width="700" height="450"/>';
+  document.getElementById("markerDescription").innerHTML = '';
 
   //read json
   const data = '[{"counties": [{"name": "Pittsburgh","lat": 40.4,"long": -80.0},{"name": "Saukville","lat": 43.4,"long": -87.9},{"name": "Chicago","lat": 41.9,"long": -87.6}],"fossils": [{"name": "raptor","lat": 42.5,"long": -74.9},{"name": "dog","lat": 43.0,"long": -87.0},{"name": "bug","lat": 42.0,"long": -90.0},{"name": "fish","lat": 43.0,"long": -76.0},{"name": "bee","lat": 42.1,"long": -88.0},{"name": "lizard","lat": 42.5,"long": -80.1}]}]';
@@ -152,10 +153,14 @@ function clicked(){
   }
 
   //top of map (lat): 47.7, bottom of map (lat): 36.5, left of map (long): -95.0, right of map (long): -74.4
-  
+  var leftBound = -95.0;
+  var rightBound = -74.4;
+  var topBound = 47.7;
+  var bottomBound = 36.5;
+
   //convert county coordinates to pixels (change in lat/long converted to change in pixel location)
-  var countyMapLat = (((47.7 - coordsCounty[0])*450)/(47.7-36.5)).toFixed(1)-20;
-  var countyMapLong = ((((-95) - coordsCounty[1])*700)/((-95)-(-74.4))).toFixed(1)+10;
+  var countyMapLat = (((topBound - coordsCounty[0])*450)/(topBound-bottomBound)).toFixed(1)-20;
+  var countyMapLong = (((leftBound - coordsCounty[1])*700)/(leftBound-rightBound)).toFixed(1)+10;
   console.log(countyMapLat);
   console.log(countyMapLong);
 
@@ -168,8 +173,8 @@ function clicked(){
   var fossilMapLong = 0;
 
   for (var i = 0; i < closest5.length; i++){
-    fossilMapLat = (((47.7 - closest5[i][2])*450)/(47.7-36.5)).toFixed(1)-20;
-    fossilMapLong = ((((-95) - closest5[i][3])*700)/((-95)-(-74.4))).toFixed(1)+10;
+    fossilMapLat = (((topBound - closest5[i][2])*450)/(topBound-bottomBound)).toFixed(1)-20;
+    fossilMapLong = (((leftBound - closest5[i][3])*700)/(leftBound-rightBound)).toFixed(1)+10;
     console.log(fossilMapLat);
     console.log(fossilMapLong);
     var image2 = '<img class="image2" onclick="marker(' + i + ')" src="images/green_marker.png" width="20" height="20" style="top:' + fossilMapLat + 'px;left:' + fossilMapLong + 'px;"/>';

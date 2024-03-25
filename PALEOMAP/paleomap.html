@@ -42,12 +42,16 @@
     </div>
 
     <div>
-      <p>Enter a county (Chicago, Saukville, or Pittsburg) and click on markers to see exact location!</p>
+      <p>Select a county and click on markers to see exact location!</p>
     </div><br>
 
     <div>
       <label for="county">County:</label>
-      <input type="text" id="county" name="county">
+      <select name="county" id="county">
+        <option value="Chicago">Chicago</option>
+        <option value="Pittsburgh">Pittsburgh</option>
+        <option value="Saukville">Saukville</option>
+      </select>
       <button onclick="clicked()">Search</button>
     </div><br>
 
