@@ -1,0 +1,66 @@
+#header {
+    text-align: center;
+    font-size: 2.25em;
+}
+
+h1 {
+    margin-bottom: 0em;
+}
+
+h2 {
+    font-size: 3em;
+    color: yellow;
+}
+
+#header p {
+    margin-top: 0em;
+    font-size: 1em;
+}
+
+html {
+    width: 100%;
+    background-color: gray;
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 3em;
+}
+
+.fossilDescription {
+    font-size: 0.9em;
+    color: yellow;
+}
+
+.fossilName {
+    color: yellow;
+    font-size: 2em;
+}
+
+#fossilImage {
+    width: 350px;
+    height: 200px;
+}
+
+#fossilDescription {
+    color: yellow;
+    font-size: 1.2em;
+}
+
+#fossilDropdown {
+    width: 15%;
+    height: 3em;
+    border-radius: 25px;
+    text-align: center;
+    background-color: white;
+    font-size: 1em;
+    color: black;
+}
+
+option {
+    background-color: white;
+    outline: wheat;
+    
+}
+
+#fossilDropdown {
+    outline-color: black;
+}

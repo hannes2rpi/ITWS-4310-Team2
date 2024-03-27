@@ -1,0 +1,34 @@
+{
+    "fossils":
+    [
+        {
+            "name": "Trilobite",
+            "description": "Extinct marine arthropods that form one of the earliest known groups of arthropods.",
+            "link": "/Extinctions/images/trilobite.png"
+        },
+
+        {
+            "name": "Ammonite",
+            "description": "An extinct group of marine mollusc animals in the subclass Ammonoidea of the class Cephalopoda.",
+            "link": "/Extinctions/images/ammonite.png"
+        },
+
+        {
+            "name": "Tyrannosaurus Rex",
+            "description": "A species of coelurosaurian theropod dinosaur that lived throughout what is now western North America.",
+            "link": "/Extinctions/images/trex.png"
+        },
+
+        {
+            "name": "Velociraptor",
+            "description": "A genus of dromaeosaurid theropod dinosaur that lived approximately 75 to 71 million years ago.",
+            "link": "/Extinctions/images/velociraptor.png"
+        },
+        
+        {
+            "name": "Stegosaurus",
+            "description": "A genus of herbivorous thyreophoran dinosaur known for its distinctive tail spikes and plates.",
+            "link": "/Extinctions/images/stegosaurus.png"
+        }
+    ]
+}
