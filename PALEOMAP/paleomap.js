@@ -1,156 +1,34 @@
 function marker(num){
-  //clear previous markers (if any)
+  //clear previous descriptions (if any)
   document.getElementById("markerDescription").innerHTML = '';
 
-  var number = Number(num);
-  console.log(number);
-
   //read json
-  const data = '[{"counties": [{"name": "Pittsburgh","lat": 40.4,"long": -80.0},{"name": "Saukville","lat": 43.4,"long": -87.9},{"name": "Chicago","lat": 41.9,"long": -87.6}],"fossils": [{"name": "raptor","lat": 42.5,"long": -74.9},{"name": "dog","lat": 43.0,"long": -87.0},{"name": "bug","lat": 42.0,"long": -90.0},{"name": "fish","lat": 43.0,"long": -76.0},{"name": "bee","lat": 42.1,"long": -88.0},{"name": "lizard","lat": 42.5,"long": -80.1}]}]';
+  const data = '[{"counties": [{"name": "Delta","lat": 46.023,"long": -86.886, "fossils": [{"name": "Platystrophia"}, {"name": "Dalmanella"}, {"name": "Bivalvia"}, {"name": "Brachiopoda"}, {"name": "Hebertella"}]},{"name": "Cape Girardeau","lat": 37.411,"long": -89.668, "fossils": [{"name": "Flexicalymene senaria"}, {"name": "Hesperorthis tricenaria"}, {"name": "Pleurotomaria"}, {"name": "Crinoidea"}, {"name": "Dinorthis subquadrata"}]},{"name": "Pierce","lat": 44.721,"long": -92.391, "fossils": [{"name": "Plectambonites"}, {"name": "Modiolopsis"}, {"name": "Lyrodesma"}, {"name": "Hormotoma"}, {"name": "Crinoidea"}]},{"name": "Fillmore","lat": 43.662,"long": -92.072, "fossils": [{"name": "Strophomena fluctuosa"}, {"name": "Gastropoda"}, {"name": "Endoceras"}, {"name": "Dinorthis subquadrata"}, {"name": "Leptaena unicostata"}]},{"name": "Rock","lat": 42.648,"long": -89.012, "fossils": [{"name": "Hallopora"}, {"name": "Cyrtoceras"}, {"name": "Hebertella"}, {"name": "Allumettoceras"}, {"name": "Plectoceras"}]},{"name": "Winneshiek","lat": 43.297,"long": -91.842, "fossils": [{"name": "Asaphus"}, {"name": "Hesperorthis tricenaria"}, {"name": "Strophomena alternata"}, {"name": "Technophorus"}, {"name": "Modiolopsis"}]},{"name": "Dubuque","lat": 42.495,"long": -90.899, "fossils": [{"name": "Mollusca"}, {"name": "Diplograptus peosta"}, {"name": "Bivalvia"}, {"name": "Lingulella"}, {"name": "Strophomena"}]},{"name": "Iowa","lat": 43.004,"long": -90.105, "fossils": [{"name": "Hesperorthis tricenaria"}, {"name": "Cyclonema"}, {"name": "Leperditia"}, {"name": "Orthis triconaria"}, {"name": "Plectambonites"}]},{"name": "Mercer","lat": 37.828,"long": -84.870, "fossils": [{"name": "Omospira alexandra"}, {"name": "Plectambonites"}, {"name": "Hesperorthis tricenaria"}, {"name": "Crinoidea"}, {"name": "Pleurocystites"}]},{"name": "Clayton","lat": 42.876,"long": -91.341, "fossils": [{"name": "Syringopora"}, {"name": "Atrypa"}, {"name": "Orthothetes"}, {"name": "Fusispira"}, {"name": "Bellerophon bilobatus"}]},{"name": "Lee","lat": 41.766,"long": -89.287, "fossils": [{"name": "Protozyga nicoletti"}, {"name": "Beloitoceras"}, {"name": "Oepikina"}, {"name": "Hesperorthis"}, {"name": "Rostricellula"}]},{"name": "Wayne","lat": 39.874,"long": -85.026, "fossils": [{"name": "Animalia"}, {"name": "Plectambonites"}, {"name": "Conularia doani"}, {"name": "Bivalvia"}, {"name": "Schizotreta"}]},{"name": "Grundy","lat": 41.280,"long": -88.407, "fossils": [{"name": "Synhomalonatus welleri"}, {"name": "Isotelus"}, {"name": "Calymene"}, {"name": "Cyclora"}, {"name": "Cyrtolites"}]},{"name": "Montgomery","lat": 39.761,"long": -84.270, "fossils": [{"name": "Platystrophia"}, {"name": "Plectambonites"}, {"name": "Trematis"}, {"name": "Hebertella"}, {"name": "Dinorthis subquadrata"}]},{"name": "Ste. Genevieve","lat": 37.886,"long": -90.184, "fossils": [{"name": "Anthozoa"}, {"name": "Rhynchotrema minnesotensis"}, {"name": "Bumastus"}, {"name": "Plectoceras"}, {"name": "Maclurites"}]},{"name": "Warren","lat": 39.438,"long": -84.161, "fossils": [{"name": "Chaetetes"}, {"name": "Camerata"}, {"name": "Bryozoa"}, {"name": "Orthis"}, {"name": "Conodonta"}]},{"name": "Clinton","lat": 39.415,"long": -83.787, "fossils": [{"name": "Stenocrinus"}, {"name": "Glyptocrinus fornshelli"}, {"name": "Beyrichia"}, {"name": "Bivalvia"}, {"name": "Bellerophon mohri"}]},{"name": "Hamilton","lat": 39.180,"long": -84.503, "fossils": [{"name": "Echinodermata"}, {"name": "Crinoidea"}, {"name": "Bivalvia"}, {"name": "Dendrocrinus dyeri"}, {"name": "Glyptocrinus"}]},{"name": "Franklin","lat": 38.242,"long": -84.873, "fossils": [{"name": "Platystrophia"}, {"name": "Eoharpes"}, {"name": "Flexicalymene senaria"}, {"name": "Bucania"}, {"name": "Annelida"}]},{"name": "Dearborn","lat": 39.154,"long": -84.957, "fossils": [{"name": "Bellerophon gorbyi"}, {"name": "Orthoceras"}, {"name": "Lyopora"}, {"name": "Dendrocrinus"}, {"name": "Modiolopsis"}]}]}]';
   var fossilFile = JSON.parse(data);
 
-  //set the given county and assign coordinates
-  var county = document.getElementById("county").value;
-  var coordsCounty = [];
-  for (var i = 0; i < fossilFile[0].counties.length; i++){
-    if (county == fossilFile[0].counties[i].name){
-      coordsCounty[0] = fossilFile[0].counties[i].lat;
-      coordsCounty[1] = fossilFile[0].counties[i].long;
+  //set description and add
+  var description = '<p>' + fossilFile[0].counties[num].name + ': (' + (fossilFile[0].counties[num].lat).toFixed(1) + ', ' + (fossilFile[0].counties[num].long).toFixed(1) + ')</p>';
+  var fossils = '<p>Fossils located here:';
+  console.log(fossilFile[0].counties[num].fossils[0].name);
+  for (var i = 0; i < fossilFile[0].counties[num].fossils.length; i++){
+    if (i == 0){
+      fossils += ' ';
+    }else{
+      fossils += ', ';
     }
+    fossils += fossilFile[0].counties[num].fossils[i].name;
   }
-
-  if (number == 5){
-    //set description and add
-    var description = '<p>' + county + ': (' + coordsCounty[0] + ', ' + coordsCounty[1] + ')</p>';
-    document.getElementById("markerDescription").innerHTML += description;
-  }else{
-    //initialize arrays
-    var listOfFossilData = [];
-    var fossilData = [];
-    var closest5 = [];
-
-    //initialize values
-    var distance = 0;
-    var name;
-    var lat;
-    var long;
-
-    //populate arrays with info from 
-    for (var i = 0; i < fossilFile[0].fossils.length; i++){
-      distance = (Math.sqrt(Math.pow((fossilFile[0].fossils[i].lat-coordsCounty[0]),2) + Math.pow((fossilFile[0].fossils[i].long-coordsCounty[1]),2))).toFixed(1);
-      name = fossilFile[0].fossils[i].name;
-      lat = fossilFile[0].fossils[i].lat;
-      long = fossilFile[0].fossils[i].long;
-      fossilData = [distance, name, lat, long];
-      listOfFossilData[i] = fossilData;
-    }
-
-    //sort fossils by lowest distance from county
-    var done = false;
-    while(!done){
-      done = true;
-      for (var i = 1; i < listOfFossilData.length; i++){
-        if (Number(listOfFossilData[i-1][0]) > Number(listOfFossilData[i][0])){
-          done = false;
-          var temp = listOfFossilData[i-1];
-          listOfFossilData[i-1] = listOfFossilData[i];
-          listOfFossilData[i] = temp;
-        }
-      }
-    }
-
-    //put the 5 closest fossils into a separate array
-    console.log("***CLOSEST 5***");
-    for (var i = 0; i < 5; i++){
-      closest5[i] = listOfFossilData[i];
-      console.log("distance: " + listOfFossilData[i][0]);
-      console.log("name: " + listOfFossilData[i][1]);
-      console.log("lat: " + listOfFossilData[i][2]);
-      console.log("long: " + listOfFossilData[i][3]);
-    }
-
-    //set description and add
-    var description = '<p>' + closest5[num][1] + ': (' + closest5[num][2] + ', ' + closest5[num][3] + ')</p>';
-    document.getElementById("markerDescription").innerHTML += description;
-  }
+  document.getElementById("markerDescription").innerHTML += description;
+  document.getElementById("markerDescription").innerHTML += fossils;
 }
 
 
 function clicked(){
-  //SELECT COUNTY, READ JSON, FIND 5 CLOSEST FOSSILS, PLACE MARKERS ON MAP
-
-  //clear previous markers (if any)
-  document.getElementById("map").innerHTML = '<img class="image1" src="images/Chicago-centered-map_450_Ordovician-new(copy).jpg" alt="map of midwest" width="700" height="450"/>';
-  document.getElementById("markerDescription").innerHTML = '';
+  //ADD ALL COUNTY MARKERS TO MAP
 
   //read json
-  const data = '[{"counties": [{"name": "Pittsburgh","lat": 40.4,"long": -80.0},{"name": "Saukville","lat": 43.4,"long": -87.9},{"name": "Chicago","lat": 41.9,"long": -87.6}],"fossils": [{"name": "raptor","lat": 42.5,"long": -74.9},{"name": "dog","lat": 43.0,"long": -87.0},{"name": "bug","lat": 42.0,"long": -90.0},{"name": "fish","lat": 43.0,"long": -76.0},{"name": "bee","lat": 42.1,"long": -88.0},{"name": "lizard","lat": 42.5,"long": -80.1}]}]';
+  const data = '[{"counties": [{"name": "Delta","lat": 46.023,"long": -86.886, "fossils": [{"name": "Platystrophia"}, {"name": "Dalmanella"}, {"name": "Bivalvia"}, {"name": "Brachiopoda"}, {"name": "Hebertella"}]},{"name": "Cape Girardeau","lat": 37.411,"long": -89.668, "fossils": [{"name": "Flexicalymene senaria"}, {"name": "Hesperorthis tricenaria"}, {"name": "Pleurotomaria"}, {"name": "Crinoidea"}, {"name": "Dinorthis subquadrata"}]},{"name": "Pierce","lat": 44.721,"long": -92.391, "fossils": [{"name": "Plectambonites"}, {"name": "Modiolopsis"}, {"name": "Lyrodesma"}, {"name": "Hormotoma"}, {"name": "Crinoidea"}]},{"name": "Fillmore","lat": 43.662,"long": -92.072, "fossils": [{"name": "Strophomena fluctuosa"}, {"name": "Gastropoda"}, {"name": "Endoceras"}, {"name": "Dinorthis subquadrata"}, {"name": "Leptaena unicostata"}]},{"name": "Rock","lat": 42.648,"long": -89.012, "fossils": [{"name": "Hallopora"}, {"name": "Cyrtoceras"}, {"name": "Hebertella"}, {"name": "Allumettoceras"}, {"name": "Plectoceras"}]},{"name": "Winneshiek","lat": 43.297,"long": -91.842, "fossils": [{"name": "Asaphus"}, {"name": "Hesperorthis tricenaria"}, {"name": "Strophomena alternata"}, {"name": "Technophorus"}, {"name": "Modiolopsis"}]},{"name": "Dubuque","lat": 42.495,"long": -90.899, "fossils": [{"name": "Mollusca"}, {"name": "Diplograptus peosta"}, {"name": "Bivalvia"}, {"name": "Lingulella"}, {"name": "Strophomena"}]},{"name": "Iowa","lat": 43.004,"long": -90.105, "fossils": [{"name": "Hesperorthis tricenaria"}, {"name": "Cyclonema"}, {"name": "Leperditia"}, {"name": "Orthis triconaria"}, {"name": "Plectambonites"}]},{"name": "Mercer","lat": 37.828,"long": -84.870, "fossils": [{"name": "Omospira alexandra"}, {"name": "Plectambonites"}, {"name": "Hesperorthis tricenaria"}, {"name": "Crinoidea"}, {"name": "Pleurocystites"}]},{"name": "Clayton","lat": 42.876,"long": -91.341, "fossils": [{"name": "Syringopora"}, {"name": "Atrypa"}, {"name": "Orthothetes"}, {"name": "Fusispira"}, {"name": "Bellerophon bilobatus"}]},{"name": "Lee","lat": 41.766,"long": -89.287, "fossils": [{"name": "Protozyga nicoletti"}, {"name": "Beloitoceras"}, {"name": "Oepikina"}, {"name": "Hesperorthis"}, {"name": "Rostricellula"}]},{"name": "Wayne","lat": 39.874,"long": -85.026, "fossils": [{"name": "Animalia"}, {"name": "Plectambonites"}, {"name": "Conularia doani"}, {"name": "Bivalvia"}, {"name": "Schizotreta"}]},{"name": "Grundy","lat": 41.280,"long": -88.407, "fossils": [{"name": "Synhomalonatus welleri"}, {"name": "Isotelus"}, {"name": "Calymene"}, {"name": "Cyclora"}, {"name": "Cyrtolites"}]},{"name": "Montgomery","lat": 39.761,"long": -84.270, "fossils": [{"name": "Platystrophia"}, {"name": "Plectambonites"}, {"name": "Trematis"}, {"name": "Hebertella"}, {"name": "Dinorthis subquadrata"}]},{"name": "Ste. Genevieve","lat": 37.886,"long": -90.184, "fossils": [{"name": "Anthozoa"}, {"name": "Rhynchotrema minnesotensis"}, {"name": "Bumastus"}, {"name": "Plectoceras"}, {"name": "Maclurites"}]},{"name": "Warren","lat": 39.438,"long": -84.161, "fossils": [{"name": "Chaetetes"}, {"name": "Camerata"}, {"name": "Bryozoa"}, {"name": "Orthis"}, {"name": "Conodonta"}]},{"name": "Clinton","lat": 39.415,"long": -83.787, "fossils": [{"name": "Stenocrinus"}, {"name": "Glyptocrinus fornshelli"}, {"name": "Beyrichia"}, {"name": "Bivalvia"}, {"name": "Bellerophon mohri"}]},{"name": "Hamilton","lat": 39.180,"long": -84.503, "fossils": [{"name": "Echinodermata"}, {"name": "Crinoidea"}, {"name": "Bivalvia"}, {"name": "Dendrocrinus dyeri"}, {"name": "Glyptocrinus"}]},{"name": "Franklin","lat": 38.242,"long": -84.873, "fossils": [{"name": "Platystrophia"}, {"name": "Eoharpes"}, {"name": "Flexicalymene senaria"}, {"name": "Bucania"}, {"name": "Annelida"}]},{"name": "Dearborn","lat": 39.154,"long": -84.957, "fossils": [{"name": "Bellerophon gorbyi"}, {"name": "Orthoceras"}, {"name": "Lyopora"}, {"name": "Dendrocrinus"}, {"name": "Modiolopsis"}]}]}]';
   var fossilFile = JSON.parse(data);
-
-  //set the given county and assign coordinates
-  var county = document.getElementById("county").value;
-  var coordsCounty = [];
-
-  //check if county is valid
-  var found = false;
-  for (var i = 0; i < fossilFile[0].counties.length; i++){
-    if (county == fossilFile[0].counties[i].name){
-      coordsCounty[0] = fossilFile[0].counties[i].lat;
-      coordsCounty[1] = fossilFile[0].counties[i].long;
-      found = true;
-    }
-  }
-
-  //return if county not valid
-  if (!found){
-    console.log("invalid county");
-    return;
-  }
-
-  //initialize arrays
-  var listOfFossilData = [];
-  var fossilData = [];
-  var closest5 = [];
-
-  //initialize values
-  var distance = 0;
-  var name;
-  var lat;
-  var long;
-
-  //populate arrays with info from 
-  for (var i = 0; i < fossilFile[0].fossils.length; i++){
-    distance = (Math.sqrt(Math.pow((fossilFile[0].fossils[i].lat-coordsCounty[0]),2) + Math.pow((fossilFile[0].fossils[i].long-coordsCounty[1]),2))).toFixed(1);
-    name = fossilFile[0].fossils[i].name;
-    lat = fossilFile[0].fossils[i].lat;
-    long = fossilFile[0].fossils[i].long;
-    fossilData = [distance, name, lat, long];
-    listOfFossilData[i] = fossilData;
-  }
-
-  //sort fossils by lowest distance from county
-  var done = false;
-  while(!done){
-    done = true;
-    for (var i = 1; i < listOfFossilData.length; i++){
-      if (Number(listOfFossilData[i-1][0]) > Number(listOfFossilData[i][0])){
-        done = false;
-        var temp = listOfFossilData[i-1];
-        listOfFossilData[i-1] = listOfFossilData[i];
-        listOfFossilData[i] = temp;
-      }
-    }
-  }
-
-  //put the 5 closest fossils into a separate array
-  console.log("***CLOSEST 5***");
-  for (var i = 0; i < 5; i++){
-    closest5[i] = listOfFossilData[i];
-    console.log("distance: " + listOfFossilData[i][0]);
-    console.log("name: " + listOfFossilData[i][1]);
-    console.log("lat: " + listOfFossilData[i][2]);
-    console.log("long: " + listOfFossilData[i][3]);
-  }
 
   //top of map (lat): 47.7, bottom of map (lat): 36.5, left of map (long): -95.0, right of map (long): -74.4
   var leftBound = -95.0;
@@ -158,27 +36,13 @@ function clicked(){
   var topBound = 47.7;
   var bottomBound = 36.5;
 
-  //convert county coordinates to pixels (change in lat/long converted to change in pixel location)
-  var countyMapLat = (((topBound - coordsCounty[0])*450)/(topBound-bottomBound)).toFixed(1)-20;
-  var countyMapLong = (((leftBound - coordsCounty[1])*700)/(leftBound-rightBound)).toFixed(1)+10;
-  console.log(countyMapLat);
-  console.log(countyMapLong);
-
-  //add marker to map to map
-  var image = '<img class="image2" onclick="marker(5)" src="images/red_marker.png" width="20" height="20" style="top:' + countyMapLat + 'px;left:' + countyMapLong + 'px;"/>';
-  document.getElementById("map").innerHTML += image;
-
-  //convert fossil coordinates to pixels (change in lat/long converted to change in pixel location)
-  var fossilMapLat = 0;
-  var fossilMapLong = 0;
-
-  for (var i = 0; i < closest5.length; i++){
-    fossilMapLat = (((topBound - closest5[i][2])*450)/(topBound-bottomBound)).toFixed(1)-20;
-    fossilMapLong = (((leftBound - closest5[i][3])*700)/(leftBound-rightBound)).toFixed(1)+10;
-    console.log(fossilMapLat);
-    console.log(fossilMapLong);
-    var image2 = '<img class="image2" onclick="marker(' + i + ')" src="images/green_marker.png" width="20" height="20" style="top:' + fossilMapLat + 'px;left:' + fossilMapLong + 'px;"/>';
-    document.getElementById("map").innerHTML += image2;
+  //add markers to map
+  for (var i = 0; i < fossilFile[0].counties.length; i++){
+    var countyMapLat = ((topBound - Number(fossilFile[0].counties[i].lat))*450)/(topBound-bottomBound)-20;
+    var countyMapLong = ((leftBound - Number(fossilFile[0].counties[i].long))*700)/(leftBound-rightBound)+10;
+    console.log(countyMapLat);
+    console.log(countyMapLong);
+    var image = '<img class="image2" onclick="marker(' + i + ')" src="images/red_marker.png" width="20" height="20" style="top:' + countyMapLat + 'px;left:' + countyMapLong + 'px;"/>';
+    document.getElementById("map").innerHTML += image;
   }
-
 };
