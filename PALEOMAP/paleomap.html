@@ -3,53 +3,76 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <script type="text/javascript" src="paleomap.js"></script>
-    <title>BEDROCK MAP</title>
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
- 
-        .mapImage {
-            border: 1px solid #ccc;
-            width: 700px;
-            height: 450px;
-            position: relative;
-            top: 0;
-            left: 0;
-        }
-
-        .image1 {
-          position: relative;
-          top: 0;
-          left: 0;
-        }
-
-        .image2 {
-          position: absolute;
-        }
-
-        .image2:hover {
-          background: #b1dae3;
-        }
-    </style>
+    <title>PALEOMAP</title>
+    <link rel="stylesheet" href="styles.css">
   </head>
 
   <body onload="clicked()">
-    <div id="top">
-      <h1>BEDROCK MAP</h1>
-    </div>
 
-    <div>
-      <p>Click on markers to see exact location!</p>
-    </div><br>
+    <header class="page-header">
+      <img src="images/logo.jpg" alt="Logo" class="header-logo">
+      <nav class="header-nav">
+        <a href="#">Videos</a>
+        <a href="#">Sites</a>
+        <a href="#">About Us</a>
+        <div class="explore-paleomap">Explore Paleomap</div>
+      </nav>
+    </header>
 
-    <div class="mapImage" id="map">
-      <img class="image1" src="images/Chicago-centered-map_450_Ordovician-new(copy).jpg" alt="map of midwest" width="700" height="450"/>
-    </div>
+    <div class="content-container">
+      <div class="vertical-menu">
+        <button class="accordion">Home</button>
+        <div class="panel"></div>
+        
+        <button class="accordion">Basic Geology Concepts</button>
+        <div class="panel">
+            <a href="#">Example 1</a>
+            <a href="#">Example 2</a>
+            <a href="#">Example 3</a>
+        </div>
+        
+        <button class="accordion">Biodiversity</button>
+        <div class="panel">
+            <a href="#">Example 1</a>
+            <a href="#">Example 2</a>
+            <a href="#">Example 3</a>
+        </div>
 
-    <div id="markerDescription">
+        <button class="accordion">Environmental Relations</button>
+        <div class="panel">
+            <a href="#">Example 1</a>
+            <a href="#">Example 2</a>
+            <a href="#">Example 3</a>
+        </div>
+
+        <button class="accordion">Geologic history of Northeastern Illinois and Southeastern Wisconsin</button>
+        <div class="panel"></div>
+        
+        <button class="accordion">Inside the Museum</button>
+        <div class="panel"></div>
+        
+        <button class="accordion">Reefs</button>
+        <div class="panel"></div>
+        
+        <button class="accordion">The Silurian World</button>
+        <div class="panel"></div>
+        
+        <button class="accordion">References</button>
+        <div class="panel"></div>
+      </div>
+
+    <div class="items">
+      <h1>PALEOMAP</h1>
+      <div>
+        <p>Click on markers to see exact location!</p>
+      </div><br>
+
+      <div class="items">
+        <div class="mapImage" id="map">
+          <img class="image1" src="images/Paleogeographic-reconstruction-of-Laurentia-during-the-Upper-Ordovician-450-Ma(copy).jpg" alt="map of midwest" width="700" height="450"/>
+          <div id="markerDescription"></div>
+        </div>
+      </div>
     </div>
 
   </body>
