@@ -32,7 +32,7 @@ body {
 }
 
 .image-container {
-    max-width: 1000px; /* Limit the maximum width */
+    max-width: 800px; /* Limit the maximum width */
     margin: 20px auto; /* Center the container */
     position: relative; /* Context for positioning the overlay text */
 }
@@ -59,7 +59,7 @@ body {
     color: white;
     padding: 10px;
     border: 2px solid white;
-    font-size: 20px; /* Adjusted for visibility */
+    font-size: 16px; /* Adjusted for visibility */
     background-color: rgba(0, 0, 0, 0.5); /* Optional: adds readability on varied backgrounds */
 }
 
@@ -139,9 +139,9 @@ body {
     border: 1px solid #ddd;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     padding: 20px;
-    width: 75%; /* Increased width for a larger box */
-    max-width: 960px; /* Increased max width for a larger appearance */
+    width: 60%; /* Increased width for a larger box */
     margin: 20px auto; /* Ensures centering */
+    margin-left: 20px;
     font-size: 20px; /* Increase base font size */
 }
 
@@ -154,10 +154,10 @@ body {
 
 .more-text {
     display: none; /* Hidden by default */
+    font-family: 'Times New Roman', serif;
+    font-size: 20px;
     padding: 15px;
     font-size: 18px;
-    margin-left: -10%;
-    width: 110%
 }
 
 .close-btn {
