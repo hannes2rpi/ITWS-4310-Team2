@@ -170,3 +170,8 @@ body {
 .image2:hover {
     background: #323a47;
 }
+
+footer{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
