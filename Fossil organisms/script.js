@@ -1,11 +1,49 @@
 function showDetail(element) {
-    const detailView = document.getElementById('detailView');
-    detailView.style.display = 'block';
-    
-    document.getElementById('detailTitle').innerText = element.getAttribute('data-title');
-    document.getElementById('detailDescription').innerText = element.getAttribute('data-description');
+    var title = element.getAttribute('data-title');
+    var description = element.getAttribute('data-description');
+    var image1 = element.getAttribute('data-image1');
+    var image2 = element.getAttribute('data-image2');
+
+    document.getElementById('detailTitle').innerText = title;
+    document.getElementById('detailDescription').innerText = description;
+
+    var imagesContainer = document.getElementById('detailImages');
+    imagesContainer.innerHTML = ''; // Clear previous images
+
+    var img1 = document.createElement('img');
+    img1.src = image1;
+    img1.className = 'detail-image';
+
+    var img2 = document.createElement('img');
+    img2.src = image2;
+    img2.className = 'detail-image';
+
+    imagesContainer.appendChild(img1);
+    imagesContainer.appendChild(img2);
+
+    document.getElementById('detailView').style.display = 'flex';
 }
 
-function closeDetail() {
+function closeDetailView() {
     document.getElementById('detailView').style.display = 'none';
 }
+
+// Event delegation for dynamically created .fossil-item elements
+document.querySelector('.fossil-gallery').addEventListener('click', function(e) {
+    if(e.target.closest('.fossil-item')) {
+        showDetail(e.target.closest('.fossil-item'));
+    }
+});
+
+document.querySelector('.close').addEventListener('click', closeDetailView);
+
+document.querySelectorAll('.fossil-item').forEach(item => {
+    item.addEventListener('click', function() {
+        showDetail(this);
+    });
+});
+
+window.onload = function() {
+    document.querySelector('.close').addEventListener('click', closeDetailView);
+};
+
