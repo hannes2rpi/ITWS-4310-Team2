@@ -1,36 +1,35 @@
-/* 页面背景和基本字体样式 */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
+body, html {
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9; 
+}
+.main-wrapper {
+    display: flex;
+    width: 100%;
+}
+
+.navbar {
+    min-width: 200px; 
+    height: 100vh; 
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #ffffff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 60%;
+    margin-left: 8%;
 }
-
-
 
 .region {
     display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    cursor: pointer;
     background-color: #f9f9f9;
-    border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-top: 10%;
 }
 
 .region img {
-    width: 150px;
-    height: 100px;
-    object-fit: cover; /* 确保图片覆盖整个区域，不变形 */
+    width: 50%;
+    height: 40%;
+    object-fit: cover;
 }
 
 .description h2 {
@@ -43,10 +42,167 @@ body {
     margin: 5px 0;
     padding: 0 20px;
     font-size: 0.9rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif  ;
 }
 
 h1 {
     color: #333;
     text-align: center;
     margin-bottom: 40px;
+}
+
+.images-wrapper {
+    display: flex;
+    justify-content: center; 
+    gap: 80px; 
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.images-wrapper img {
+    width: 25%; 
+    height: 15%; 
+}
+.large-image {
+    max-width: 90%; 
+    max-height: 300px; 
+    height: auto;
+}
+@media (max-width: 768px) {
+    .navbar {
+        min-width: 150px; 
+    }
+
+    .container, .content-container {
+        width: 100%; 
+        margin-left: 0; 
+        padding: 0 10px; 
+    }
+
+    .images-wrapper img {
+        width: 50%;
+        height: auto; 
+    }
+
+    .vertical-menu {
+        width: 100%; 
+        margin-right: 0; 
+    }
+
+    .region img {
+        width: 100%; 
+        height: auto; 
+    }
+}
+
+/* 针对更小屏幕设备的调整 */
+@media (max-width: 480px) {
+    .accordion, .panel a {
+        font-size: 14px; 
+    }
+
+    .description h2, .description p {
+        padding: 0 10px; 
+    }
+
+    .images-wrapper {
+        gap: 20px; 
+    }
+}
+
+
+/*Nav bar*/
+.page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding: 10px 20px;
+}
+
+.header-logo {
+    width: 150px;
+    height: 70px;
+}
+
+.header-nav a {
+    margin-right: 20px;
+    color: black;
+    text-decoration: none;
+}
+
+.explore-paleomap {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+}
+
+.content-container {
+    display: flex;
+    align-items: flex-start; /* Align items at their top edge */
+    gap: 20px; /* Adds some space between the vertical menu and info container */
+    margin-top: 20px; /* Space from the header or top of the page */
+}
+
+.vertical-menu {
+    font-family: 'Times New Roman', serif;
+    width: 200px;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-right: 10px;
+}
+
+.accordion {
+    background-color: #ffffff;
+    color: #444;
+    cursor: pointer;
+    padding: 16px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+}
+
+.accordion:hover {
+    background-color: #eaeaea;
+}
+
+.accordion:after {
+    content: '\02795'; /* Unicode character for "plus" sign */
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.accordion.active:after {
+    content: "\2796"; /* Unicode character for "minus" sign */
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.panel a {
+    font-size: 16px;
+    text-decoration: none;
+    color: #444;
+    display: block;
+    padding: 10px 0;
+}
+
+.panel a:hover {
+    background-color: #eaeaea;
 }
