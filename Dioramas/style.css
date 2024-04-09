@@ -2,38 +2,40 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #f8f9fa; 
 }
 
 .content-wrapper {
     display: flex;
     justify-content: space-between; 
-    padding: 20px;
-    max-width: 1200px; 
-    margin: 40px auto; 
     gap: 20px; 
     background-color: #fff; 
-    border: 1px solid #ddd; 
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
-    border-radius: 8px; 
 }
 
-
-.diorama-info {
-    flex: 1; 
-    max-width: 400px; 
-}
-
-.diorama-images {
+.left-section, .center-section, .right-section {
     display: flex;
+    flex-direction: column;
     gap: 10px;
+}
+
+.left-section, .right-section {
+    width:100%;
+    flex: 25%;
+}
+
+.right-section {
+    margin:5%;
+    flex: 20%;
+}
+.center-section {
+    flex: 50%;
+    display: flex;
     justify-content: center;
-    flex: 1;
+    align-items: center;
+    margin-top: 3%;
 }
 
 .diorama-img {
     width: 100%;
-    max-width: 300px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     object-fit: cover; 
@@ -45,12 +47,107 @@ body, html {
         align-items: center; 
     }
 
-    .diorama-info, .diorama-images {
-        width: 100%;
+    .left-section, .center-section, .right-section {
         max-width: none; 
     }
 
     .diorama-img {
         max-width: 100%;
     }
+}
+
+/*Nav bar*/
+.page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding: 10px 20px;
+}
+
+.header-logo {
+    width: 150px;
+    height: 70px;
+}
+
+.header-nav a {
+    margin-right: 20px;
+    color: black;
+    text-decoration: none;
+}
+
+.explore-paleomap {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+}
+
+.content-container {
+    display: flex;
+    align-items: flex-start; /* Align items at their top edge */
+    gap: 20px; /* Adds some space between the vertical menu and info container */
+    margin-top: 20px; /* Space from the header or top of the page */
+}
+
+.vertical-menu {
+    font-family: 'Times New Roman', serif;
+    width: 200px;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-right: 10px;
+}
+
+.accordion {
+    background-color: #ffffff;
+    color: #444;
+    cursor: pointer;
+    padding: 16px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+}
+
+.accordion:hover {
+    background-color: #eaeaea;
+}
+
+.accordion:after {
+    content: '\02795'; /* Unicode character for "plus" sign */
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.accordion.active:after {
+    content: "\2796"; /* Unicode character for "minus" sign */
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.panel a {
+    font-size: 16px;
+    text-decoration: none;
+    color: #444;
+    display: block;
+    padding: 10px 0;
+}
+
+.panel a:hover {
+    background-color: #eaeaea;
 }
