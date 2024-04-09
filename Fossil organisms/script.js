@@ -8,8 +8,7 @@ function showDetail(element) {
     document.getElementById('detailDescription').innerText = description;
 
     var imagesContainer = document.getElementById('detailImages');
-    imagesContainer.innerHTML = ''; // Clear previous images
-
+    imagesContainer.innerHTML = ''; 
     var img1 = document.createElement('img');
     img1.src = image1;
     img1.className = 'detail-image';
@@ -28,7 +27,6 @@ function closeDetailView() {
     document.getElementById('detailView').style.display = 'none';
 }
 
-// Event delegation for dynamically created .fossil-item elements
 document.querySelector('.fossil-gallery').addEventListener('click', function(e) {
     if(e.target.closest('.fossil-item')) {
         showDetail(e.target.closest('.fossil-item'));
