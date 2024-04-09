@@ -95,7 +95,6 @@ h1 {
     }
 }
 
-/* 针对更小屏幕设备的调整 */
 @media (max-width: 480px) {
     .accordion, .panel a {
         font-size: 14px; 
