@@ -7,111 +7,180 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="header-container">
-        <h1>Explore Fossil Organisms from the Devonian Period</h1>
-        <div class="subtitle">Discover the ancient life forms that thrived millions of years ago.</div>
-    </div>
-    
-    <h2>Major group</h2>
-    <div class="scrolling-wrapper">
+    <header class="page-header">
+        <img src="images/logo.jpg" alt="Logo" class="header-logo">
+        <nav class="header-nav">
+            <a href="https://www.fieldmuseum.org">Field Museum of Natural History</a>
+            <a href="https://www.mpm.edu">Milwaukee Public Museum</a>
+            <a href="../PALEOMAP/paleomap.html"><div class="explore-paleomap">Explore Paleomap</div></a>
+        </nav>
+    </header>
+    <div class="main-wrapper">
+        <div class="left">
+            <div class="navbar">
+                <div class="content-container">
+                    <div class="vertical-menu">
+                      <a href="../Welcome Page/index.html"><button class="accordion">Home</button></a>
+                      
+                      <a href="../Fossil organisms/index.html"><button class="accordion">Fossil Organisms</button></a>
+                      
+                      <a href="../Biodiversity/index.html"><button class="accordion">Biodiversity</button></a>
+              
+                      <a href="../Dioramas/index.html"><button class="accordion">Dioramas</button></a>
+              
+                      <button class="accordion">Paleomap</button>
+                      <div class="panel">
+                          <a href="../PALEOMAP/bedrock.html">Bedrock Map</a>
+                          <a href="../PALEOMAP/paleomap.html">Paleomap</a>
+                      </div>
+                      
+                      <a href="../Extinctions/massextinctions.html"><button class="accordion">Mass Extinctions</button></a>
+                      
+                      <a href="../Localities/localities.html"><button class="accordion">Localities</button></a>
+                      
+                      <a href="../Highlights/highlight.html"><button class="accordion">Collection Highlights</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
         
-        <div class="fossil-gallery">
-            <div class="fossil-item" onclick="showDetail(this)" data-title="Fossil Invertebrate 1" data-description="This is a detailed description of Fossil Invertebrate 1.">
-                <img src="img/1.png" alt="Fossil Invertebrate 1">
-                <div class="hover-info">Fossil Invertebrate 1</div>
-            </div>
-            <div class="fossil-item" onclick="showDetail(this)" data-title="Fossil Invertebrate 1" data-description="This is a detailed description of Fossil Invertebrate 1.">
-                <img src="img/1.png" alt="Fossil Invertebrate 1">
-                <div class="hover-info">Fossil Invertebrate 1</div>
-            </div>
-            <div class="fossil-item" onclick="showDetail(this)" data-title="Fossil Invertebrate 1" data-description="This is a detailed description of Fossil Invertebrate 1.">
-                <img src="img/1.png" alt="Fossil Invertebrate 1">
-                <div class="hover-info">Fossil Invertebrate 1</div>
-            </div>
-
-            <div class="fossil-item" onclick="showDetail(this)" data-title="Fossil Invertebrate 1" data-description="This is a detailed description of Fossil Invertebrate 1.">
-                <img src="img/1.png" alt="Fossil Invertebrate 1">
-                <div class="hover-info">Fossil Invertebrate 1</div>
-            </div>
-            <div class="fossil-item" onclick="showDetail(this)" data-title="Fossil Invertebrate 1" data-description="This is a detailed description of Fossil Invertebrate 1.">
-                <img src="img/1.png" alt="Fossil Invertebrate 1">
-                <div class="hover-info">Fossil Invertebrate 1</div>
-            </div>
-            <div class="fossil-item" onclick="showDetail(this)" data-title="Fossil Invertebrate 1" data-description="This is a detailed description of Fossil Invertebrate 1.">
-                <img src="img/1.png" alt="Fossil Invertebrate 1">
-                <div class="hover-info">Fossil Invertebrate 1</div>
-            </div>
             
-            <div class="fossil-item" onclick="showDetail(this)" data-title="Fossil Invertebrate 1" data-description="This is a detailed description of Fossil Invertebrate 1.">
-                <img src="img/1.png" alt="Fossil Invertebrate 1">
-                <div class="hover-info">Fossil Invertebrate 1</div>
-            </div>
-            <div class="fossil-item" onclick="showDetail(this)" data-title="Fossil Invertebrate 1" data-description="This is a detailed description of Fossil Invertebrate 1.">
-                <img src="img/1.png" alt="Fossil Invertebrate 1">
-                <div class="hover-info">Fossil Invertebrate 1</div>
-            </div>
-            <div class="fossil-item" onclick="showDetail(this)" data-title="Fossil Invertebrate 1" data-description="This is a detailed description of Fossil Invertebrate 1.">
-                <img src="img/1.png" alt="Fossil Invertebrate 1">
-                <div class="hover-info">Fossil Invertebrate 1</div>
-            </div>
+        <div class="scrolling-wrapper">
+                <div class="fossil-gallery">
+                    <div class="fossil-item" onclick="showDetail(this)" 
+                    data-title="Coral" 
+                    data-description="RUGOSE CORALS are extinct, but are related to 
+                    modern corals. They lived only in seawater. Rugose corals 
+                    had a hard cone-shaped shell made from calcium carbonate.
+                     The soft coral polyp that lived in the shell resembled a
+                      modern sea anemone. Corals captured small animals and 
+                      other food particles with a ring of tentacles surrounding
+                       their mouth. Rugose corals included both solitary forms,
+                        where the coral animal was housed in a cup-shaped skeleton
+                         and colonial forms, where many coral animals lived 
+                         together in individual spaces within the skeleton. 
+                         There are over 1,300 species of Ordovician rugose corals.
+
+                    "
+                    data-image1="images/RPI Fossil Highlights/RPI Coral_Hall_148_Grewingkia.jpg"
+                    data-image2="images/RPI Fossil Highlights/RPI Coral_Hall_148_Grewingkia-02.jpg"
+                    >
+                        <img src="images/RPI Fossils/01 RPI Coral.jpg" alt="Fossil Invertebrate 1">
+                        <div class="hover-info">Coral</div>
+                    </div>
+
+                    <div class="fossil-item" onclick="showDetail(this)" 
+                    data-title="Trilobite" 
+                    data-description="TRILOBITES are an extinct group of arthropods which possessed a cephalon (head), thorax, and pygidium (tail). All arthropods have jointed-legs, but only in exceptionally-preserved trilobite fossils can the legs and antennae be seen. All trilobites lived in seawater and breathed with gills. Most were crawlers upon the seafloor, and some could also swim through the water or burrow into sediment. Many trilobites could roll-up into a ball for protection just like modern Isopods, commonly known as sowbugs or pillbugs. There are over 5,460 Ordovician trilobite species.
+                    "
+                    data-image1="images/RPI Fossil Highlights/Trilobite-01.jpg"
+                    data-image2="images/RPI Fossil Highlights/Trilobite-03.jpg">
+                        <img src="images/RPI Fossils/02 RPI Trilobite.jpg" alt="Fossil Invertebrate 1">
+                        <div class="hover-info">Trilobite</div>
+                    </div>
+
+                    <div class="fossil-item" onclick="showDetail(this)" 
+                    data-title="Bryozoan" 
+                    data-description="BRYOZOANS are colonial animals that live in both freshwater and seawater. A colony is composed of hundreds of very tiny individuals, each of which has a special organ called a lophophore that filters small food particles from the water. Bryozoan colonies are attached to the seafloor or to other organisms. Colonies of different species have a variety of shapes, including fans, discs, and bushes. There are over 300 species of bryozoans from the Ordovician. 
+                    "
+                    data-image1="images/RPI Fossil Highlights/RPI Bryozoa PE2059 Pachydictya acuta.jpg"
+                    data-image2="images/RPI Fossil Highlights/RPI Bryozoan uc207 homotrypa dawsoni .jpg">
+                    
+                        <img src="images/RPI Fossils/03 RPI Bryozoan.jpg" alt="Fossil Invertebrate 1">
+                        <div class="hover-info">Bryozoan</div>
+                    </div>
+        
+                    <div class="fossil-item" onclick="showDetail(this)" 
+                    data-title="Brachiopod" 
+                    data-description="BRACHIOPODS are relatively rare animals today and live only in seawater. They were more abundant in seas of the Ordovician Period. Brachiopods have a shell made of two halves. Each half of the brachiopod shell has a slightly different shape. Most of the space inside the brachiopod shell is occupied by a special organ called the lophophore that acts as a water pump and food filtering device. Brachiopods feed by filtering tiny food particles from seawater with their lophophore. Brachiopods do not move very much. Most are held to the bottom by a stalk called a pedicle. Some brachiopods lacked a stalk and had flattened shells and rested freely on the seafloor. There are over 2,100 Ordovician brachiopod species.
+                    "
+                    data-image1="images/RPI Fossil Highlights/Brachiopod-01.jpg"
+                    data-image2="images/RPI Fossil Highlights/Brachiopod-02.jpg">
+                    
+                        <img src="images/RPI Fossils/04 RPI Brachiopod.jpg" alt="Fossil Invertebrate 1">
+                        <div class="hover-info">Brachiopod</div>
+                    </div>
+
+                    <div class="fossil-item" onclick="showDetail(this)" 
+                    data-title="Bivalve" 
+                    data-description="BIVALVES include modern clams, scallops and oysters, and they live in both freshwater and seawater. Bivalves have a shell made of two halves, which are called valves. In most bivalves, each valve is a mirror image of the other. Bivalves feed on tiny bits of food found in the water or sediment. Some bivalves burrow into the sediment. Others live on the sediment surface or are attached to hard objects such as rock or coral. There are over 500 described Ordovician species of bivalves.
+                    "
+                    data-image1="images/RPI Fossil Highlights/Bivalve-01.jpg"
+                    data-image2="images/RPI Fossil Highlights/Bivalve-02.jpg">
+                    
+                        <img src="images/RPI Fossils/05 RPI Bivalve01.jpg" alt="Fossil Invertebrate 1">
+                        <div class="hover-info">Bivalve</div>
+                    </div>
+                    <div class="fossil-item" onclick="showDetail(this)" 
+                    data-title="Gastropod" 
+                    data-description="GASTROPODS have coiled shells and are commonly known as snails. Today they live on land, in fresh water, and seawater. Gastropods crawl about on a large, sticky foot. Some gastropods filter food from the water, some graze on plants, and others are carnivores that eat animals. It is usually not possible to determine which of these feeding methods were based just on the fossil shell.  There are over 1,000 species of Ordovician gastropods.
+                    "
+                    data-image1="images/RPI Fossil Highlights/gastropod-01.jpg"
+                    data-image2="images/RPI Fossil Highlights/gastropod-02.jpg">
+                    
+                        <img src="images/RPI Fossils/06 RPI Gastropod.jpg" alt="Fossil Invertebrate 1">
+                        <div class="hover-info">Gastropod</div>
+                    </div>
+                    
+                    <div class="fossil-item" onclick="showDetail(this)" 
+                    data-title="Cephalopod" 
+                    data-description="CEPHALOPODS today live only in seawater and include the squid, octopus, cuttlefish, and pearly nautilus. Today there are only a few species of nautiloids and they all have coiled shells. Ancient cephalopod shells may be coiled, slightly curved, or straight, and all are characterized by internal chambers. The cephalopod body, which included a head with eyes, mouth and tentacles, occupied the final and largest chamber called the living chamber. All modern cephalopods are active swimmers and carnivores that capture and eat other animals. Some cephalopods today, such as the octopus, spend most of their time on the seafloor.  In the Ordovician some of the larger orthoconic cephalopods may have spent most of their time lying on the seafloor. There are over 950 species of Ordovician cephalopods. 
+                    "
+                    data-image1="images/RPI Fossil Highlights/Cephalopod-01.jpg"
+                    data-image2="images/RPI Fossil Highlights/Cephalopod-02.jpg">
+                    
+                        <img src="images/RPI Fossils/07 RPI Cephalopod.jpg" alt="Fossil Invertebrate 1">
+                        <div class="hover-info">Cephalopod</div>
+                    </div>
+                    <div class="fossil-item" onclick="showDetail(this)" 
+                    data-title="Crinoid" 
+                    data-description='CRINOIDS are a type of echinoderm, which is a group of animals that includes starfish and sea urchins. Crinoids live only in seawater, and although uncommon today, they were very abundant in the geologic past. Crinoids have a stalk that is attached to the seafloor with a holdfast and topped with a crown-shaped body, or calyx, which bears feathery arms with tube feet. Although they are commonly known as "sea lilies", crinoids are NOT plants. The arms gather small food particles from the water and transfer them to a mouth at the top of the calyx. The crinoid skeleton is composed of hundreds of tiny plates that usually fall apart when the animal dies. There are over 160 species of Ordovician crinoids.
+                    '
+                    data-image1="images/RPI Fossil Highlights/Crinoid-01.jpg"
+                    data-image2="images/RPI Fossil Highlights/Crinoid-02.jpg">
+                    
+                        <img src="images/RPI Fossils/08 RPI Crinoid.jpg" alt="Fossil Invertebrate 1">
+                        <div class="hover-info">Crinoid</div>
+                    </div>
+                    <div class="fossil-item" onclick="showDetail(this)" 
+                    data-title="Echinoderms" 
+                    data-description="OTHER ECHINODERMS include starfish and brittle stars and extinct forms such as Edrioasteroids, cyclocystoids, cystoids, and blastoids. Some of these animals were active predators crawling along the seafloor looking for prey while others had stalks and resembled crinoids feeding by filtering small food particles from sea water. There are over 300 Ordovician species of these echinoderms.
+                    "
+                    data-image1="images/RPI Fossil Highlights/Other Echinoderm-01.jpg"
+                    data-image2="images/RPI Fossil Highlights/Other Echinoderm-02.jpg">
+                        <img src="images/RPI Fossils/09 RPI Other Echinoderms.jpg" alt="Fossil Invertebrate 1">
+                        <div class="hover-info">Other Echinoderms</div>
+                    </div>
+                </div>
+        
+    
+            <div class="right-space"></div>
+        
+    
         </div>
 
     </div>
-
+    
+    
     <hr>
 
 
 
-    <div class="fossil-section">
-        <h2>fossils</h2>
-        <div class="fossil-row">
-            <div class="fossil-item" onclick="showDetail(this)" data-title="Fossil Invertebrate 1" data-description="This is a detailed description of Fossil Invertebrate 1.">
-                <img src="img/1.png" alt="Fossil Invertebrate 1">
-                <div class="hover-info">Fossil Invertebrate 1</div>
-            </div>
-            <div class="fossil-item" onclick="showDetail(this)" data-title="Fossil Invertebrate 1" data-description="This is a detailed description of Fossil Invertebrate 1.">
-                <img src="img/1.png" alt="Fossil Invertebrate 1">
-                <div class="hover-info">Fossil Invertebrate 1</div>
-            </div>
-            <div class="fossil-item" onclick="showDetail(this)" data-title="Fossil Invertebrate 1" data-description="This is a detailed description of Fossil Invertebrate 1.">
-                <img src="img/1.png" alt="Fossil Invertebrate 1">
-                <div class="hover-info">Fossil Invertebrate 1</div>
-            </div>
-        </div>
-        <div class="fossil-row">
-            <div class="fossil-item" onclick="showDetail(this)" data-title="Fossil Invertebrate 1" data-description="This is a detailed description of Fossil Invertebrate 1.">
-                <img src="img/1.png" alt="Fossil Invertebrate 1">
-                <div class="hover-info">Fossil Invertebrate 1</div>
-            </div>
-            <div class="fossil-item" onclick="showDetail(this)" data-title="Fossil Invertebrate 1" data-description="This is a detailed description of Fossil Invertebrate 1.">
-                <img src="img/1.png" alt="Fossil Invertebrate 1">
-                <div class="hover-info">Fossil Invertebrate 1</div>
-            </div>
-            <div class="fossil-item" onclick="showDetail(this)" data-title="Fossil Invertebrate 1" data-description="This is a detailed description of Fossil Invertebrate 1.">
-                <img src="img/1.png" alt="Fossil Invertebrate 1">
-                <div class="hover-info">Fossil Invertebrate 1</div>
-            </div>
-        </div>
-        <div class="fossil-row">
-            <div class="fossil-item" onclick="showDetail(this)" data-title="Fossil Invertebrate 1" data-description="This is a detailed description of Fossil Invertebrate 1.">
-                <img src="img/1.png" alt="Fossil Invertebrate 1">
-                <div class="hover-info">Fossil Invertebrate 1</div>
-            </div>
-            <div class="fossil-item" onclick="showDetail(this)" data-title="Fossil Invertebrate 1" data-description="This is a detailed description of Fossil Invertebrate 1.">
-                <img src="img/1.png" alt="Fossil Invertebrate 1">
-                <div class="hover-info">Fossil Invertebrate 1</div>
-            </div>
-            
-        </div>
-    </div>
+    
 
     <div id="detailView" class="detail-view">
         <div class="detail-content">
-            <span class="close" onclick="closeDetail()">&times;</span>
-            <h2 id="detailTitle">Fossil Title</h2>
-            <p id="detailDescription">Fossil description goes here.</p>
+            <span class="close" onclick="closeDetailView()">&times;</span>
+            <div id="detailImages" class="detail-images"></div>
+            <h2 id="detailTitle"></h2>
+            <p id="detailDescription" style="font-family:Georgia, 'Times New Roman', Times, serif;"></p>
         </div>
+        <Br>
+        <br>
+        <br>
     </div>
+    
+    
 
 <script src="script.js"></script>
 </body>
