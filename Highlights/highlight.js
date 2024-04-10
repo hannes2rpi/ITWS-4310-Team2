@@ -192,7 +192,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const selectedFossilName = event.target.value;
     const selectedFossil = data["fossils"].find(fossil => fossil["name"] === selectedFossilName);
 
-    nameElement.textContent = selectedFossil["name"];
+    nameElement.innerHTML = `<i>${selectedFossil["name"]}</i>`;
     imageElement.src = selectedFossil["link"];
     imageElement.alt = selectedFossil["name"] + " image";
     descriptionElement.textContent = selectedFossil["description"];
