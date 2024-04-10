@@ -1,58 +1,80 @@
 <!DocTYPE HTML>
 <html lang="en">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <script type="text/javascript" src="highlight.js"></script>
-        <link rel="stylesheet" href="highlight.css">
-        <title>Fossil Highlights</title>
-    </head>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="text/javascript" src="highlight.js"></script>
+    <title>Collection Highlights</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
 
-    <body>
-        <header class="page-header">
-            <img src="images/logo.jpg" alt="Logo" class="header-logo">
-            <nav class="header-nav">
-                <a href="https://www.fieldmuseum.org" target=”_blank”>Field Museum of Natural History</a>
-                <a href="https://www.mpm.edu" target=”_blank”>Milwaukee Public Museum</a>
-            </nav>
-        </header>
-        <div id="content-container">
-            <div class="vertical-menu">
-                <a href="../Welcome Page/index.html"><button class="accordion">Home</button></a>
-                
-                <a href="../Fossil organisms/index.html"><button class="accordion">Fossil Organisms</button></a>
-                
-                <a href="../Biodiversity/index.html"><button class="accordion">Biodiversity</button></a>
-                
-                <a href="../Dioramas/index.html"><button class="accordion">Dioramas</button></a>
-                
-                <button class="accordion">Paleomap</button>
-                <div class="panel">
-                    <a href="../PALEOMAP/bedrock.html">Bedrock Map</a>
-                    <a href="../PALEOMAP/paleomap.html">Paleomap</a>
-                </div>
-                
-                <a href="../Extinctions/massextinctions.html"><button class="accordion">Mass Extinctions</button></a>
-                
-                <a href="../Localities/localities.html"><button class="accordion">Localities</button></a>
-                
-                <a href="../Highlights/highlight.html"><button class="accordion">Collection Highlights</button></a>
-            </div>
-            <div id="pageContent">
-                <div id="header">
-                    <h1>Fossil Highlights</h1>
-                    <p>Select a fossil!</p>
-                </div>
+  <body onload="clicked()">
 
-                <select id="fossilDropdown"></select>
+    <header class="page-header">
+      <img src="images/logo.jpg" alt="Logo" class="header-logo">
+      <nav class="header-nav">
+          <a href="https://www.fieldmuseum.org" target=”_blank”>Field Museum of Natural History</a>
+          <a href="https://www.mpm.edu" target=”_blank”>Milwaukee Public Museum</a>
+      </nav>
+    </header>
 
-                <div id="fossilDetails">
-                    <h2 id="fossilName">Ambonychia radiata</h2>
-                    <p id="fossilNumber">UC 697</p>
-                    <p id="fossilDescription">Bivalve: Ambonychia radiata.</p>
-                    <p id="fossilAge">Late Ordovician</p>
-                    <p id="fossilLocation">Hamilton County, Cincinnati, Ohio</p>
-                    <img id="fossilImage" src="/Highlights/images/Bivalve-01.jpg">
-                </div>
-            </div>
+    <div class="content-container">
+      <div class="vertical-menu">
+        <a href="../Welcome Page/index.html"><button class="accordion">Home</button></a>
+        
+        <a href="../Fossil organisms/index.html"><button class="accordion">Fossil Organisms</button></a>
+        
+        <a href="../Biodiversity/index.html"><button class="accordion">Biodiversity</button></a>
+
+        <a href="../Dioramas/index.html"><button class="accordion">Dioramas</button></a>
+
+        <button class="accordion">Paleomap</button>
+        <div class="panel">
+            <a href="../PALEOMAP/bedrock.html">Bedrock Map</a>
+            <a href="../PALEOMAP/paleomap.html">Paleomap</a>
         </div>
-    </body>
+        
+        <a href="../Extinctions/massextinctions.html"><button class="accordion">Mass Extinctions</button></a>
+        
+        <a href="../Localities/localities.html"><button class="accordion">Localities</button></a>
+        
+        <a href="highlight.html"><button class="accordion">Collection Highlights</button></a>
+      </div>
+
+    <div class="items">
+      <h1>Collection Highlights</h1>
+
+      <div id="selection">
+        <label for="fossil" id="fossilTab"></label>
+        <select name="fossil" id="fossil">
+          <option value="coralgrewingkia">Coral Grewingkia</option>
+          <option value="coralzaphrentis">Coral Zaphrentis</option>
+          <option value="bryozoan">Bryozoan</option>
+          <option value="bivalve1">Bivalve 1</option>
+          <option value="bivalve2">Bivalve 2</option>
+          <option value="gastropod1">Gastropod 1</option>
+          <option value="gastropod2">Gastropod 2</option>
+          <option value="gastropod3">Gastropod 3</option>
+          <option value="gastropod4">Gastropod 4</option>
+          <option value="crinoid1">Crinoid 1</option>
+          <option value="crinoid2">Crinoid 2</option>
+          <option value="echinoderm1">Echinoderm 1</option>
+          <option value="echinoderm2">Echinoderm 2</option>
+          <option value="echinoderm3">Echinoderm 3</option>
+          <option value="brachiopod1">Brachiopod 1</option>
+          <option value="brachiopod2">Brachiopod 2</option>
+          <option value="cephalopod1">Cephalopod 1</option>
+          <option value="cephalopod2">Cephalopod 2</option>
+          <option value="trilobite1">Trilobite 1</option>
+          <option value="trilobite2">Trilobite 2</option>
+          <option value="trilobite3">Trilobite 3</option>
+        </select>
+        <button class="button" onclick="clicked()">Submit</button>
+      </div><br><br>
+
+      <div id="resultimg"></div>
+
+      <div id="result"></div>
+    </div>
+  </div>
+
+  </body>
