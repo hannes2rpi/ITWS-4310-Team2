@@ -25,11 +25,21 @@ body {
     border-style: solid;
     border: white;
     border-color: gray;
-    font-size: 2em;
+    font-size: 1.2em;
+    font-family: Arial, sans-serif;
+    transition: color 0.3s;
 }
 
+.header-nav a:hover,
+.header-nav a:focus {
+    text-decoration: none;
+    color:#007BFF
+}
+
+
 h1 {
-    font-size: 5em;
+    font-size: 2.5em;
+    font-family: Arial, sans-serif;
 }
 
 #locationTab {
