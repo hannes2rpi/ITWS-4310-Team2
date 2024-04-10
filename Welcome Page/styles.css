@@ -6,16 +6,20 @@ body {
 
 .page-header {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     justify-content: space-between;
     background-color: lightgray;
     padding: 10px 20px;
 }
 
+
 .header-logo {
     width: 150px;
     height: 70px;
 }
+
+
 
 .header-nav * {
     margin-right: 20px;
@@ -26,7 +30,15 @@ body {
     border-width: 2em;
     border: white;
     border-color: gray;
-    font-size: 2em;
+    font-size: 1.2em;
+    font-family: Arial, sans-serif;
+    transition: color 0.3s;
+}
+
+.header-nav a:hover,
+.header-nav a:focus {
+    text-decoration: none;
+    color: #007BFF; /* Change for hover effect */
 }
 
 .explore-paleomap {
