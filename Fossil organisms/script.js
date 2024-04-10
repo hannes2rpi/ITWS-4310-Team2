@@ -1,3 +1,18 @@
+document.addEventListener('DOMContentLoaded', function() {
+    var acc = document.getElementsByClassName("accordion");
+    for (var i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            } 
+        });
+    }
+});
+
 function showDetail(element) {
     var title = element.getAttribute('data-title');
     var description = element.getAttribute('data-description');
@@ -44,22 +59,6 @@ document.querySelectorAll('.fossil-item').forEach(item => {
 window.onload = function() {
     document.querySelector('.close').addEventListener('click', closeDetailView);
 };
-
-document.addEventListener('DOMContentLoaded', function() {
-    var acc = document.getElementsByClassName("accordion");
-    for (var i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var panel = this.nextElementSibling;
-            if (panel.style.maxHeight) {
-                panel.style.maxHeight = null;
-            } else {
-                panel.style.maxHeight = panel.scrollHeight + "px";
-            } 
-        });
-    }
-});
-
 
 document.addEventListener('DOMContentLoaded', function() {
     var acc = document.getElementsByClassName("accordion");
