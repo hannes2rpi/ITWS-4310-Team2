@@ -171,3 +171,28 @@ img:hover {
     border: 2px solid lightblue;
     border-style: inset;
 }
+
+.button {
+  display: inline-block;
+  padding: 4px 8px;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: blue;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 3px skyblue;
+}
+
+.button:hover {
+    background-color: darkblue;
+}
+
+.button:active {
+  background-color: darkblue;
+  box-shadow: 0 3px deepskyblue;
+  transform: translateY(2px);
+}
