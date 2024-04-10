@@ -47,38 +47,12 @@ h1 {
 }
 
 #location {
-    font-size: 2em;
+    font-size: 1.25em;
     text-align: center;
 }
 
 #result {
-    font-size: 1.5em;
-}
-
-.button {
-    display: inline-block;
-    padding: 4px 8px;
-    font-size: 14px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    outline: none;
-    color: #fff;
-    background-color: blue;
-    border: none;
-    border-radius: 8px;
-    box-shadow: 0 3px skyblue;
-    width: 100%;
-}
-
-.button:hover {
-    background-color: darkblue;
-}
-
-.button:active {
-    background-color: darkblue;
-    box-shadow: 0 3px deepskyblue;
-    transform: translateY(2px);
+    font-size: 1.25em;
 }
 
 .content-container {
@@ -155,7 +129,6 @@ h1 {
     width: 87%;
     left: auto;
     right: auto;
-    background-color: whitesmoke;
     padding-bottom: 1.5%;
 }
 
@@ -184,8 +157,8 @@ img:hover {
 
 .button {
   display: inline-block;
-  padding: 4px 8px;
-  font-size: 14px;
+  padding: 5px 10px;
+  font-size: 16px;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
@@ -193,7 +166,7 @@ img:hover {
   color: #fff;
   background-color: blue;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   box-shadow: 0 3px skyblue;
 }
 
@@ -204,5 +177,5 @@ img:hover {
 .button:active {
   background-color: darkblue;
   box-shadow: 0 3px deepskyblue;
-  transform: translateY(2px);
+  transform: translateY(3px);
 }
