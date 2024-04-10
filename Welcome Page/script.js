@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 panel.style.maxHeight = null;
             } else {
                 panel.style.maxHeight = panel.scrollHeight + "px";
+                this.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
             } 
         });
     }
@@ -24,4 +25,3 @@ function toggleMore(event) {
         moreText.style.display = "none";
     }
 }
-

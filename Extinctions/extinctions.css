@@ -1,31 +1,139 @@
 #header {
+    width: 80%;
     text-align: center;
-    font-size: 2.25em;
+    font-size: 1.5em;
+    height: 0%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#header p {
+    width: 75%;
+    text-align: center;
+    padding-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 h1 {
     margin-bottom: 0em;
 }
 
-#header p {
-    margin-top: 0em;
-    font-size: 1em;
+#header img {
+    width: 75%;
+    height: 25em;
 }
 
-html {
-    width: 100%;
-    background-color: gray;
-    text-align: center;
-    font-size: 1.5em;
-    margin-bottom: 3em;
+body {
+    margin: 0px;
 }
 
-.fossilDescription {
-    font-size: 0.9em;
-    color: yellow;
+.page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: lightgray;
+    padding: 10px 20px;
 }
 
-.fossilName {
-    color: yellow;
+.header-logo {
+    width: 150px;
+    height: 70px;
+}
+
+.header-nav * {
+    margin-right: 20px;
+    color: black;
+    text-decoration: none;
+    height: 100%;
+    border-style: solid;
+    border: white;
+    border-color: gray;
     font-size: 2em;
 }
+
+#content-container {
+    display: flex;
+    width: 1000;
+}
+
+.vertical-menu {
+    font-family: 'Times New Roman', serif;
+    width: 200px;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-right: 10px;
+    margin-top: 20px;
+    height: 0%;
+}
+
+.accordion {
+    background-color: #ffffff;
+    color: #444;
+    cursor: pointer;
+    padding: 16px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+}
+
+.accordion:hover {
+    background-color: lightblue;
+}
+
+.accordion:after {
+    content: '\02795'; /* Unicode character for "plus" sign */
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.accordion.active:after {
+    content: "\2796"; /* Unicode character for "minus" sign */
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.panel a {
+    font-size: 16px;
+    text-decoration: none;
+    color: #444;
+    display: block;
+    padding: 10px 0;
+}
+
+.panel a:hover {
+    background-color: #eaeaea;
+}
+
+.close-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-size: 24px
+}
+
+.items {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    align-items: center;
+}
+ 

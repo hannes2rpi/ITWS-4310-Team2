@@ -8,16 +8,51 @@
     </head>
 
     <body>
-        <div id="header">
-            <h1>Fossil Highlights</h1>
-            <p>Select a fossil!</p>
-        </div>
+        <header class="page-header">
+            <img src="images/logo.jpg" alt="Logo" class="header-logo">
+            <nav class="header-nav">
+                <a href="https://www.fieldmuseum.org" target=”_blank”>Field Museum of Natural History</a>
+                <a href="https://www.mpm.edu" target=”_blank”>Milwaukee Public Museum</a>
+            </nav>
+        </header>
+        <div id="content-container">
+            <div class="vertical-menu">
+                <a href="../Welcome Page/index.html"><button class="accordion">Home</button></a>
+                
+                <a href="../Fossil organisms/index.html"><button class="accordion">Fossil Organisms</button></a>
+                
+                <a href="../Biodiversity/index.html"><button class="accordion">Biodiversity</button></a>
+                
+                <a href="../Dioramas/index.html"><button class="accordion">Dioramas</button></a>
+                
+                <button class="accordion">Paleomap</button>
+                <div class="panel">
+                    <a href="../PALEOMAP/bedrock.html">Bedrock Map</a>
+                    <a href="../PALEOMAP/paleomap.html">Paleomap</a>
+                </div>
+                
+                <a href="../Extinctions/massextinctions.html"><button class="accordion">Mass Extinctions</button></a>
+                
+                <a href="../Localities/localities.html"><button class="accordion">Localities</button></a>
+                
+                <a href="../Highlights/highlight.html"><button class="accordion">Collection Highlights</button></a>
+            </div>
+            <div id="pageContent">
+                <div id="header">
+                    <h1>Fossil Highlights</h1>
+                    <p>Select a fossil!</p>
+                </div>
 
-        <select id="fossilDropdown"></select>
+                <select id="fossilDropdown"></select>
 
-        <div id="fossilDetails">
-            <h2 id="fossilName">Trilobite</h2>
-            <img id="fossilImage" src="/Extinctions/images/trilobite.png">
-            <p id="fossilDescription">Extinct marine arthropods that form one of the earliest known groups of arthropods.</p>
+                <div id="fossilDetails">
+                    <h2 id="fossilName">Ambonychia radiata</h2>
+                    <p id="fossilNumber">UC 697</p>
+                    <p id="fossilDescription">Bivalve: Ambonychia radiata.</p>
+                    <p id="fossilAge">Late Ordovician</p>
+                    <p id="fossilLocation">Hamilton County, Cincinnati, Ohio</p>
+                    <img id="fossilImage" src="/Highlights/images/Bivalve-01.jpg">
+                </div>
+            </div>
         </div>
     </body>

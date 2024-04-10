@@ -12,9 +12,8 @@
     <header class="page-header">
       <img src="images/logo.jpg" alt="Logo" class="header-logo">
       <nav class="header-nav">
-          <a href="https://www.fieldmuseum.org">Field Museum of Natural History</a>
-          <a href="https://www.mpm.edu">Milwaukee Public Museum</a>
-          <a href="../PALEOMAP/paleomap.html"><div class="explore-paleomap">Explore Paleomap</div></a>
+          <a href="https://www.fieldmuseum.org" target=”_blank”>Field Museum of Natural History</a>
+          <a href="https://www.mpm.edu" target=”_blank”>Milwaukee Public Museum</a>
       </nav>
     </header>
 
@@ -40,23 +39,22 @@
         
         <a href="../Highlights/highlight.html"><button class="accordion">Collection Highlights</button></a>
       </div>
-
     <div class="items">
       <h1>Localities</h1>
 
-      <div>
-        <label for="location">Location:</label>
+      <div id="selection">
+        <label for="location" id="locationTab"></label>
         <select name="location" id="location">
           <option value="doorcounty">Door County</option>
           <option value="grantcounty">Grant County</option>
           <option value="winneshiekcounty">Winneshiek County</option>
-        </select>
-        <button onclick="clicked()">Submit</button>
+        </select><br><br>
+        <button class="button" onclick="clicked()">Submit</button>
       </div><br>
 
-      <div id="resultimg"></div>
-
       <div id="result"></div>
+      
+      <div id="resultimg"></div>
     </div>
   </div>
 

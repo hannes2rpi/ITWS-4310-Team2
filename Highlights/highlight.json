@@ -1,34 +1,173 @@
 {
-    "fossils":
-    [
-        {
-            "name": "Trilobite",
-            "description": "Extinct marine arthropods that form one of the earliest known groups of arthropods.",
-            "link": "/Extinctions/images/trilobite.png"
-        },
-
-        {
-            "name": "Ammonite",
-            "description": "An extinct group of marine mollusc animals in the subclass Ammonoidea of the class Cephalopoda.",
-            "link": "/Extinctions/images/ammonite.png"
-        },
-
-        {
-            "name": "Tyrannosaurus Rex",
-            "description": "A species of coelurosaurian theropod dinosaur that lived throughout what is now western North America.",
-            "link": "/Extinctions/images/trex.png"
-        },
-
-        {
-            "name": "Velociraptor",
-            "description": "A genus of dromaeosaurid theropod dinosaur that lived approximately 75 to 71 million years ago.",
-            "link": "/Extinctions/images/velociraptor.png"
-        },
-        
-        {
-            "name": "Stegosaurus",
-            "description": "A genus of herbivorous thyreophoran dinosaur known for its distinctive tail spikes and plates.",
-            "link": "/Extinctions/images/stegosaurus.png"
-        }
+    "fossils": [
+      {
+        "name": "Ambonychia radiata",
+        "description": "Bivalve: Ambonychia radiata.",
+        "specimenNumber": "UC 697",
+        "age": "Late Ordovician",
+        "location": "Hamilton County, Cincinnati, Ohio",
+        "link": "/Highlights/images/Bivalve-01.jpg"
+    },
+      {
+        "name": "Ambonychia radiata 2",
+        "description": "Bivalve: Ambonychia radiata.",
+        "specimenNumber": "UC 489",
+        "age": "Late Ordovician",
+        "location": "Hamilton County, Cincinnati, Ohio",
+        "link": "/Highlights/images/Bivalve-02.jpg"
+      },
+      {
+        "name": "Calymene callicephala 1",
+        "description": "Trilobite: Calymene callicephala.",
+        "specimenNumber": "UC 990A",
+        "age": "Late Ordovician",
+        "location": "Hamilton County, Cincinnati, Ohio",
+        "link": "/Highlights/images/Trilobite-01.jpg"
+      },
+      {
+        "name": "Calymene callicephala 2",
+        "description": "Trilobite: Calymene callicephala.",
+        "specimenNumber": "UC 990A",
+        "age": "Late Ordovician",
+        "location": "Hamilton County, Cincinnati, Ohio",
+        "link": "/Highlights/images/Trilobite-02.jpg"
+      },
+      {
+        "name": "Cyclocystoidees illinoisensis",
+        "description": "Echinoderm: Cyclocystoidees illinoisensis.",
+        "specimenNumber": "PE 25564",
+        "age": "Ordovician",
+        "location": "Alexander County, Thebes, Illinois",
+        "link": "/Highlights/images/Other_Echinoderm-01.jpg"
+      },
+      {
+        "name": "Cyclonema mediale",
+        "description": "Gastropod: Cyclonema mediale.",
+        "specimenNumber": "P 6393",
+        "age": "Ordovician",
+        "location": "Hamilton County, Cincinnati, Ohio",
+        "link": "/Highlights/images/Gastropod-02.jpg"
+      },
+      {
+        "name": "Cyclonema varicosum",
+        "description": "Gastropod: Cyclonema varicosum.",
+        "specimenNumber": "P 6393",
+        "age": "Ordovician",
+        "location": "Butler County, Middletown, Ohio",
+        "link": "/Highlights/images/Gastropod-01.jpg"
+      },
+      {
+        "name": "Endoceras sp. 1",
+        "description": "Cephalopod: Endoceras sp.",
+        "specimenNumber": "UC 59937",
+        "age": "Late Ordovician",
+        "location": "Grant County, Fennimore, Wisconsin",
+        "link": "/Highlights/images/Cephalopod-01.jpg"
+      },
+      {
+        "name": "Endoceras sp. 2",
+        "description": "Cephalopod: Endoceras sp.",
+        "specimenNumber": "UC 15108",
+        "age": "Late Ordovician",
+        "location": "Dodge County, Trenton, Wisconsin",
+        "link": "/Highlights/images/Cephalopod-02.jpg"
+      },
+      {
+        "name": "Glyptocrinus dyeri",
+        "description": "Crinoid: Glyptocrinus dyeri.",
+        "specimenNumber": "P 141",
+        "age": "Ordovician",
+        "location": "Winnebago County, Rockford, Indiana",
+        "link": "/Highlights/images/Crinoid-02.jpg"
+      },
+      {
+        "name": "Grewingkia",
+        "description": "Rugose Coral: Grewingkia sp.",
+        "specimenNumber": "Hall 148",
+        "age": "Late Ordovician",
+        "location": "Wayne County, Richmond, Indiana",
+        "link": "/Highlights/images/Coral_Hall_148_Grewingkia.jpg"
+      },
+      {
+        "name": "Homotrypa dawsoni",
+        "description": "Bryozoan: Homotrypa dawsoni.",
+        "specimenNumber": "UC 208",
+        "age": "Ordovician",
+        "location": "Clinton County, Blanchester, Ohio",
+        "link": "/Highlights/images/Bryozoan_uc207_homotrypa_dawsoni.jpg"
+      },
+      {
+        "name": "Isotellus gigas",
+        "description": "Trilobite: Isotellus gigas.",
+        "specimenNumber": "P 181",
+        "age": "Late Ordovician",
+        "location": "Wayne County, Richmond, Indiana",
+        "link": "/Highlights/images/Trilobite-03.jpg"
+      },
+      {
+        "name": "Leptaena rhomboidalis",
+        "description": "Brachiopod: Leptaena rhomboidalis.",
+        "specimenNumber": "P 294.5",
+        "age": "Late Ordovician",
+        "location": "Wayne County, Richmond, Indiana",
+        "link": "/Highlights/images/Brachiopod-01.jpg"
+      },
+      {
+        "name": "Omospira Alexandra",
+        "description": "Gastropod: Omospira Alexandra.",
+        "specimenNumber": "PE 56766",
+        "age": "Ordovician",
+        "location": "Mercer County, High Bridge, Kentucky",
+        "link": "/Highlights/images/Gastropod-04.jpg"
+      },
+      {
+        "name": "Pachydictya acuta",
+        "description": "Bryozoan: Pachydictya acuta.",
+        "specimenNumber": "PE 2059",
+        "age": "Ordovician",
+        "location": "Belleville, Ontario, Canada",
+        "link": "/Highlights/images/Bryozoa_PE2059_Pachydictya_acuta.jpg"
+      },
+      {
+        "name": "Platystrophia ponderosa",
+        "description": "Brachiopod: Platystrophia ponderosa.",
+        "specimenNumber": "UC 22656",
+        "age": "Late Ordovician",
+        "location": "Hamilton County, Cincinnati, Ohio",
+        "link": "/Highlights/images/Brachiopod-02.jpg"
+      },
+      {
+        "name": "Protaster flexuosa",
+        "description": "Echinoderm: Protaster flexuosa.",
+        "specimenNumber": "PE 54844",
+        "age": "Ordovician",
+        "location": "Hamilton County, Cincinnati, Ohio",
+        "link": "/Highlights/images/Other_Echinoderm-02.jpg"
+      },
+      {
+        "name": "Reteocrinus onealli",
+        "description": "Crinoid: Reteocrinus onealli.",
+        "specimenNumber": "P 11905",
+        "age": "Ordovician",
+        "location": "Clinton County, Blanchester, Ohio",
+        "link": "/Highlights/images/Crinoid-01.jpg"
+      },
+      {
+        "name": "Urasterella sp.",
+        "description": "Echinoderm: Urasterella sp.",
+        "specimenNumber": "PE 17762",
+        "age": "Ordovician",
+        "location": "Scott County, Dorton Fort, Virginia",
+        "link": "/Highlights/images/Other_Echinoderm-03.jpg"
+      },
+      {
+        "name": "Zaphrentis",
+        "description": "Rugose Coral: Zaphrentis sp.",
+        "specimenNumber": "N/A",
+        "age": "Late Ordovician",
+        "location": "Jefferson County, Indiana",
+        "link": "/Highlights/images/Coral_Zaphrentis.jpg"
+      }
     ]
-}
+  }
+  
