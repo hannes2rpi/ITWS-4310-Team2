@@ -8,7 +8,7 @@ body, html {
     display: flex;
     justify-content: space-between; 
     gap: 20px; 
-    background-color: #fff; 
+    background-color: #f9f9f9; 
 }
 
 .left-section, .center-section, .right-section {
@@ -61,7 +61,7 @@ body, html {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: lightgray;
+    background-color: #f9f9f9;
     padding: 10px 20px;
 }
 
@@ -106,18 +106,22 @@ body, html {
 }
 
 .vertical-menu {
-    font-family: 'Times New Roman', serif;
-    width: 200px;
-    background-color: #f7f7f7;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 210px;
+    background-color: #c0d3e0;
     border: 1px solid #ddd;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     padding: 20px;
     margin-right: 10px;
 }
-
 .accordion {
-    background-color: #ffffff;
-    color: #444;
+    background-color: #c0d3e0;
+    color: #333;
     cursor: pointer;
     padding: 16px;
     width: 100%;
@@ -127,23 +131,16 @@ body, html {
     transition: background-color 0.3s;
     font-size: 18px;
     font-weight: bold;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #333;
 }
 
 .accordion:hover {
     background-color: lightblue;
 }
 
-.accordion:after {
-    content: '\02795'; /* Unicode character for "plus" sign */
-    color: #777;
-    font-weight: bold;
-    float: right;
-    margin-left: 5px;
-}
-
-.accordion.active:after {
-    content: "\2796"; /* Unicode character for "minus" sign */
+a[href="https://www.fieldmuseum.org"] .accordion:after,
+a[href="https://www.mpm.edu"] .accordion:after {
+    content: none; /* Remove the Unicode character */
 }
 
 .panel {
