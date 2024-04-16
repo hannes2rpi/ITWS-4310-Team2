@@ -9,7 +9,7 @@ body {
 
 h1 {
     margin-bottom: 0em;
-    font-size: 1.5em;
+    font-size: 1.25em;
     font-family: Arial, sans-serif;
 }
 
@@ -21,6 +21,7 @@ h2 {
 
 #header p {
     width: 75%;
+    font-size: 0.8em;
     text-align: center;
     padding-top: 2%;
     margin-left: auto;
@@ -34,7 +35,7 @@ h2 {
 
 #fossilName {
     color: black;
-    font-size: 3.5em !important;
+    font-size: 1.5em !important;
     margin: 2.5% 0% 0% 0% !important;
 }
 
@@ -43,6 +44,7 @@ h2 {
     background-color: white;
     margin-top: 20px;
     text-align: center;
+    padding-top: 1.5%;
 }
 
 #fossilImage {
@@ -176,10 +178,7 @@ option {
     font-size: 24px
 }
 
-.items {
-    display: flex;
-    flex-direction: column;
-    width: 70%;
-    align-items: center;
+.center {
+    margin-left: 210px;
 }
  

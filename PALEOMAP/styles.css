@@ -155,8 +155,12 @@ a[href="https://www.mpm.edu"] .accordion:after {
 .items {
     display: flex;
     flex-direction: column;
-    width: 70%;
+    margin: 20px auto;
     align-items: center;
+}
+
+.center {
+    margin-left: 210px;
 }
  
 .mapImage {

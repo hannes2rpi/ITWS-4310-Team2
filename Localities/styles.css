@@ -4,8 +4,6 @@ body {
     
 }
 
-
-
 .header-logo {
     width: 150px;
     height: 70px;
@@ -36,43 +34,12 @@ h1 {
     font-family: Arial, sans-serif;
 }
 
-#locationTab {
-    font-size: 2em;
-}
-
 #location {
-    font-size: 2em;
-    text-align: center;
+    font-size: 1.1em;
 }
 
 #result {
-    font-size: 1.5em;
-}
-
-.button {
-    display: inline-block;
-    padding: 4px 8px;
-    font-size: 14px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    outline: none;
-    color: #fff;
-    background-color: blue;
-    border: none;
-    border-radius: 8px;
-    box-shadow: 0 3px skyblue;
-    width: 100%;
-}
-
-.button:hover {
-    background-color: darkblue;
-}
-
-.button:active {
-    background-color: darkblue;
-    box-shadow: 0 3px deepskyblue;
-    transform: translateY(2px);
+    font-size: 1.1em;
 }
 
 .content-container {
@@ -141,11 +108,8 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 87%;
-    left: auto;
-    right: auto;
-    background-color: white;
     padding-bottom: 1.5%;
+    padding-top: 1.5%;
 }
 
 #img {
@@ -162,13 +126,17 @@ img:hover {
 }
 
 #pic {
-    flex: 0 32%;
+    display: flex;
     height: 300px;
-    width: 385px;
+    width: 380px;
     margin-right: 10px;
     margin-bottom: 10px;
     border: 2px solid lightblue;
     border-style: inset;
+}
+
+.center {
+    margin-left: 270px;
 }
 
 .button {
@@ -183,7 +151,7 @@ img:hover {
   background-color: blue;
   border: none;
   border-radius: 8px;
-  box-shadow: 0 3px skyblue;
+  box-shadow: 0 2px skyblue;
 }
 
 .button:hover {
@@ -192,6 +160,6 @@ img:hover {
 
 .button:active {
   background-color: darkblue;
-  box-shadow: 0 3px deepskyblue;
+  box-shadow: 0 2px deepskyblue;
   transform: translateY(2px);
 }
