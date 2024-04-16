@@ -1,17 +1,28 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    
+html, body {
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove default padding */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-.page-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    justify-content: space-between;
-    background-color: lightgray;
-    padding: 10px 20px;
+body {
+    overflow-y: auto; /* Allow vertical scrolling */
 }
+
+.image-container {
+    flex: 1; /* Take up half of the page */
+    background-image: url('SilurianReef.jpg'); /* Set the background image */
+    background-size: 100% auto; /* Cover the entire container width, maintain aspect ratio */
+    background-position: right; /* Position the background image from the right */
+    background-repeat: no-repeat; /* Prevent background image from repeating */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+  
+}
+
+
+
+
 
 
 .header-logo {
@@ -50,56 +61,36 @@ body {
 }
 
 .header-container {
-    margin-top: 20px;
     display: flex;
-    align-items: center;
-    width: 87%;
+   
 }
 
-.image-container {
-    flex: 1; /* Take up remaining space */
-    max-width: none; /* Allow the image container to expand */
-}
 
-.featured-image {
-    position: relative;
-    width: 100%; /* Ensure responsiveness */
-    max-width: 1000px; /* Max width of the image */
-    margin: auto; /* Center the image */
-}
-
-.featured-image img {
-    display: block; /* Correct display */
-    width: 100%; /* Full width of its parent */
-    max-width: 1000px; /* Max width */
-    height: auto; /* Maintain aspect ratio */
-}
-
-.overlay-text {
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: white;
-    padding: 10px;
-    border: 2px solid white;
-    font-size: 20px; /* Adjusted for visibility */
-    background-color: rgba(0, 0, 0, 0.5); /* Optional: adds readability on varied backgrounds */
+.image-container img {
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .vertical-menu {
-    font-family: 'Times New Roman', serif;
-    width: 200px;
-    background-color: #f7f7f7;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 210px;
+    background-color: #c0d3e0;
     border: 1px solid #ddd;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     padding: 20px;
     margin-right: 10px;
 }
 
+
+
 .accordion {
-    background-color: #ffffff;
-    color: #444;
+    background-color:#c0d3e0;
+    color: #333;
     cursor: pointer;
     padding: 16px;
     width: 100%;
@@ -109,28 +100,21 @@ body {
     transition: background-color 0.3s;
     font-size: 18px;
     font-weight: bold;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #333;
 }
 
 .accordion:hover {
     background-color: lightblue;
 }
 
-.accordion:after {
-    content: '\02795'; /* Unicode character for "plus" sign */
-    color: #777;
-    font-weight: bold;
-    float: right;
-    margin-left: 5px;
+
+
+a[href="https://www.fieldmuseum.org"] .accordion:after,
+a[href="https://www.mpm.edu"] .accordion:after {
+    content: none; /* Remove the Unicode character */
 }
 
-.accordion.active:after {
-    content: "\2796"; /* Unicode character for "minus" sign */
-}
 
-.accordion.active:after {
-    content: "\2796"; /* Unicode character for "minus" sign */
-}
 
 .panel {
     padding: 0 18px;
@@ -153,7 +137,7 @@ body {
 }
 
 .info-container {
-    font-family: 'Times New Roman', serif;
+    font-family: 'Times New Roman', serif;;
     background-color: #f7f7f7;
     border: 1px solid #ddd;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -162,85 +146,25 @@ body {
     width: 50%; /* Set the width */
     text-align: center;
     font-size: larger;
+    margin-bottom: 10vh;
+    
 }
 
-.more-link {
-    color: blue;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.more-text {
-    display: none; /* Hidden by default */
-    font-family: 'Times New Roman', serif;
-    font-size: 20px;
-    padding: 15px;
-    font-size: 18px;
-}
-
-.close-btn {
-    position: absolute;
-    top: 0;
-    right: 0;
-    cursor: pointer;
-    border: none;
-    background: none;
-    font-size: 24px
-}
 .discover-header {
     text-align: center;
-    font-size: 36px; /* Increased font size */
-    color: #333; /* Darker color for better contrast */
-    font-family: 'Arial', sans-serif; /* Different font family */
-    margin-top: 40px; /* Adjusted margin top */
-    margin-bottom: 20px; /* Added margin bottom */
-    text-transform: uppercase; /* Uppercase text */
-    letter-spacing: 2px; /* Increased letter spacing */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Added text shadow for depth */
-}
-
-
-
-.youtube-video-section {
-    background-color: lightblue; /* Light background color */
-    padding: 20px;
-    margin-top: 10px;
-    width: 100%;
-}
-
-
-.youtube-video {
-    width: 300%; /* Set width to fill the container */
-    max-width: 500px; /* Set maximum width */
-    height: auto; /* Maintain aspect ratio */
-}
-
-
-
-.video-section-header {
     font-size: 36px;
-    text-align: center;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    margin-top: 100px;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    
-
-}
-
-.video-wrapper {
     position: relative;
-    width: 70%; /* Adjust the width as needed */
-    margin: auto; /* Center the video horizontally */
-    padding-top: 40%; /* Aspect ratio for responsive layout */
+    background-color: #f7f7f7; /* Light gray background color */
+    padding: 20px; /* Add padding to make text more readable */
+    border-top: 2px solid #ccc; /* Top border for separation */
+    border-bottom: 2px solid #ccc; /* Bottom border for separation */
 }
 
-.video-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
 
-}
 
 .paleomap-section {
     text-align: center;
@@ -248,8 +172,16 @@ body {
 }
 
 .section-header {
-    font-size: 24px;
+    font-size: 36px;
+    font-family: Arial, Helvetica, sans-serif;
     margin-bottom: 20px;
+    background: linear-gradient(45deg, #f0f0f0 25%, transparent 25%, transparent 75%, #f0f0f0 75%);
+
+
+    
+ 
+  
+
 }
 
 .map-container {
@@ -259,11 +191,34 @@ body {
     background-color: #e0e0e0; /* Placeholder background, remove or adjust for your map */
     border: 1px solid #ccc; /* A light border around the map container */
     box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: Adds a subtle shadow for depth */
+
 }
 
 /* Adjusting iframe size for map if necessary */
 .map-container iframe {
     width: 100%;
     height: 100%;
+}
+
+.footer {
+    background-color: #f8f8f8; /* Light background color */
+    padding: 20px; /* Add padding for spacing */
+    text-align: center; /* Center-align text */
+}
+
+.footer-item {
+    display: inline-block; /* Display names horizontally */
+    margin: 0 10px; /* Add margin between names */
+    font-size: 14px; /* Adjust font size */
+}
+
+.footer-item:not(:last-child) {
+    border-right: 1px solid #ccc; /* Add a border between names */
+    padding-right: 10px; /* Add padding to separate names */
+}
+
+.footer-item:hover {
+    color: #007BFF; /* Change text color on hover */
+    cursor: pointer; /* Show pointer cursor on hover */
 }
 
