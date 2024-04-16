@@ -20,9 +20,9 @@ body {
   
 }
 
-
-
-
+.featured-image {
+    width: 100%;
+}
 
 
 .header-logo {
@@ -150,12 +150,16 @@ a[href="https://www.mpm.edu"] .accordion:after {
     
 }
 
+.center {
+    padding-left: 210px;
+}
+
 .discover-header {
     text-align: center;
     font-size: 36px;
     color: #333;
     font-family: 'Arial', sans-serif;
-    margin-top: 100px;
+    margin-top: 10px;
     margin-bottom: 20px;
     position: relative;
     background-color: #f7f7f7; /* Light gray background color */
@@ -176,11 +180,6 @@ a[href="https://www.mpm.edu"] .accordion:after {
     font-family: Arial, Helvetica, sans-serif;
     margin-bottom: 20px;
     background: linear-gradient(45deg, #f0f0f0 25%, transparent 25%, transparent 75%, #f0f0f0 75%);
-
-
-    
- 
-  
 
 }
 
